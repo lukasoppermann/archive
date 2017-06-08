@@ -1,0 +1,7 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+
+RewriteCond $1 !^(sql)
+RewriteCond %{REQUEST_URI} !^/live/.*$
+RewriteRule ^(.*)$ /live/$1 [L]
+

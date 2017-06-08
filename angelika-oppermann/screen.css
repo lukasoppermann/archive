@@ -1,0 +1,245 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	border: 0px;
+}
+body{
+	background: #003B40 url(images/bg.gif) repeat-x;
+	width: 100%;
+	height: 100%;
+	font: 12pt "Trebuchet MS",sans-serif;
+	color: #FFFFFF;
+}
+#head{
+	float: left;
+	background: #3E3E3E;
+    width: 100%;
+    height: 35px;
+	font: 0.7em "Trebuchet MS",sans-serif;
+	color: #FFFFFF;
+}
+#topline{
+    float: left;
+    height: 3px;
+    width: 100%;
+    background: #FFBA00;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+#titel{
+	float: left;
+	height: 25px;
+    padding: 10px 10px 0px 20px;
+    width: 140px;
+}
+#titel a {
+	margin-top: -10px;
+    margin-left: -20px;
+	height: 25px;
+    padding: 10px 10px 0px 20px;
+	color: #fff;
+    width: 140px;
+    display: block;
+	text-decoration: none;
+    background: #474747;
+}
+#titel a:hover {
+	margin-top: -10px;
+    margin-left: -20px;
+    padding: 10px 10px 0px 20px;
+	height: 25px;
+    width: 140px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+    background: #3E3E3E;
+}
+#box{
+	width: 850px;
+	height: 450px;
+	padding: 16px;
+	float: left;
+	margin-left: 80px;
+	overflow: hidden;
+	background-color: rgb(255,255,255);
+	border: 4px solid rgb(245,245,245);
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.35);
+}
+#box div{
+	overflow: hidden;	
+}
+#impressum{
+	margin-top: 5px;
+    padding: 10px;
+	float: right;
+	width: 320px;
+    height: 445px;
+    background:url(images/bg_transparent.png);
+    border: 0px solid #F1F1F1;
+    color: #3E3E3E;
+    font: 0.7em "Trebuchet MS",sans-serif;
+    position:absolute;
+ 	left:610px;
+}
+#impressum a{
+	color: #003B40;
+}
+#impressum a:hover{
+	color: #003B40;
+    text-decoration: none;
+}
+input{
+	    background:url(images/bg_transparent.png) repeat;
+        border: 1px solid #FFFFFF;
+}
+input:focus{
+	    background:url(images/bg_transparent.png) repeat;
+        border: 1px solid #007A84;
+}
+textarea{
+	    background:url(images/bg_transparent.png) repeat;
+        border: 1px solid #E5E5E5;
+}
+textarea:focus{
+	    background:url(images/bg_transparent.png) repeat;
+        border: 1px solid #007A84;
+}
+#menue {
+	list-style: none;
+    float: right;
+    text-align: left;
+    height: 35px;
+}
+#menue li {
+	float:left;
+}
+#menue a {
+    padding: 10px 10px 0px 20px;
+	height: 25px;
+    width: 100px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+#menue a:hover, a.active {
+	display: block;
+    background: #474747;
+}
+
+a.left{
+	position:absolute;
+    padding-top: 220px;
+    padding-right: 17px;
+    height: 230px;
+    width: 18px;
+    display: block;
+	text-decoration: none;
+    text-align:right;
+}
+a.left:hover{
+	position:absolute;
+    height: 230px;
+    width: 18px;
+    display: block;
+	text-decoration: none;
+    background:url(images/bg_transparent.png);
+}
+a.right{
+	position:absolute;
+    left: 915px;
+    float: right;
+	padding-top: 220px;
+    padding-left: 17px;
+    height: 230px;
+    width: 18px;
+    display: block;
+	text-decoration: none;
+}
+a.right:hover{
+	float: right;
+	position:absolute;
+    left: 915px;
+    padding-left: 17px;
+    height: 230px;
+    width: 18px;
+    display: block;
+	text-decoration: none;
+    background:url(images/bg_transparent.png);
+}
+/*\*/
+#impressum{
+	margin-top: 10px;
+    padding: 10px;
+	float: right;
+	width: 320px;
+    height: 430px;
+    background:url(images/bg_transparent.png);
+    border: 0px solid #F1F1F1;
+    color: #3E3E3E;
+    font: 0.7em "Trebuchet MS",sans-serif;
+    position:absolute;
+ 	left:610px;
+}/**/
+/*Slider*/
+
+#heading {
+	float: left;
+	display: block;
+	text-align: left;
+	height: 15px;
+	margin-top: 15px;
+	margin-left: 490px;
+	margin-right: 3px;
+	margin-bottom: 1em;
+}
+#heading img{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#buttons{
+	list-style:none;
+	float: right;
+	overflow: hidden;
+	width:1px;
+	height: 1px;	
+}
+#buttons li{
+	float: left;	
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	display: block;	
+}
+/*#heading * {
+	float: right;
+	display: inline;
+	padding: 4px;
+	cursor: pointer;
+	vertical-align: middle;
+}*/
+#heading li.active {
+	color: #37b5a7;
+	font-style: italic;
+}
+
+#wrapper {width: 850px; height: 450px; float: left;}
+
+#panes {
+	text-align: justify;
+	border-style: none;
+}
+
+#panes p {
+	float: left;
+	width: 850px;
+	height: 450px;
+}
+
+#panes div div { overflow: hidden;}
+
+#previous { float: none; cursor: pointer; }
+#next { float: none; cursor: pointer; }

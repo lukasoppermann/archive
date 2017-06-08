@@ -1,0 +1,193 @@
+.page-content{
+	display: block;
+	margin-left: 200px;
+	padding: 20px;
+}
+.column{
+	width: 400px;
+	float: left;
+	margin-right: 30px;
+}
+.width200{
+	position: relative;
+	width: 210px;
+	float: left;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.headline{
+	color: rgb(150,150,150);
+	text-shadow: rgb(255,255,255) 0px 1px 0px;
+	margin: 10px 0 10px 10px;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+.form-element label{
+	margin: 0px 0 2px 0;
+}
+.form-element input, .form-element textarea{
+	position: relative;	
+	z-index: 3;
+}
+.form-element.saved input, .form-element.saved textarea{
+	border: 1px solid rgb(100,170,20) !important;
+	box-shadow: 0px 0px 3px 0px rgb(100,170,20), inset 0px 0px 1px 0px rgba(85,180,20,0.5);
+	-webkit-box-shadow: 0px 0px 3px 0px rgb(100,170,20), inset 0px 0px 1px 0px rgba(85,180,20,0.5);
+	-moz-box-shadow: 0px 0px 3px 0px rgb(100,170,20), inset 0px 0px 1px 0px rgba(85,180,20,0.5);
+}
+.form-element.error input, .form-element.error textarea{
+	border: 1px solid rgb(200,0,0) !important;
+	box-shadow: 0px 0px 3px 0px rgb(200,0,0), inset 0px 0px 1px 0px rgba(200,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 3px 0px rgb(200,0,0), inset 0px 0px 1px 0px rgba(200,0,0,0.5);
+	-moz-box-shadow: 0px 0px 3px 0px rgb(200,0,0), inset 0px 0px 1px 0px rgba(200,0,0,0.5);
+}
+.form-element .help{
+	float: left;
+	color: rgb(150,150,150);
+	padding: 3px;
+	font-size: 10px;
+}
+.width200:before{
+	content: "saved";
+	display: block;
+	height: 20px;
+	width: 50px;
+	position: absolute;
+	opacity: 0;
+	top: 30px;	
+	left: 90%;
+	z-index: 2;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.width200.saved:before{
+	opacity: 1.0;	
+	color: rgb(100,170,20);
+	text-shadow: rgba(85,180,20,0.5) 0px 0px 1px;
+	left: 100%;
+}
+.collapse{
+	width: 100%;
+	float: left;
+}
+.collapse h2{
+	height: 40px;
+	width: 100%;
+	float: left;	
+}
+.collapse h2:hover{
+	cursor: pointer;
+	color: rgb(125,125,125);
+}
+.collapse h2:before{
+	content: "";
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(125,125,125) transparent transparent transparent;
+	position: absolute;
+	left: -16px;
+	top: 4px;
+}
+.collapse.collapsed h2:before{
+	border-color: transparent transparent transparent rgb(125,125,125);
+	left: -15px;
+	top: 2px;
+}
+.collapsable{
+	float: left;
+	display: block;
+}
+.button{
+	float: right;
+	padding: 10px;
+}
+.stores .store{
+	width: 100%;
+	min-height: 60px;
+	list-style: none;
+	float: left;
+}
+.stores .store [name="address"], .stores .store [name="trading_hours"]{
+	height: 100px;
+}
+.stores .sortable-placeholder{
+	float: left;
+	height: 32px;
+	width: 100%;
+	list-style: none;
+	border-radius: 3px;
+}
+/* --------------------------- */
+/* social accounts */
+.social-user-card{
+	width: 400px;
+	padding: 10px;
+	float: left;
+	border-radius: 5px;
+	color: rgb(125,125,125);
+	background: rgb(255,255,255);
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25);
+}
+.social-user-card .card-content{ float: left; }
+.social-user-card .image{
+	float: left;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.social-user-card .image img{ float: left; }
+.social-user-card .connected-text{
+	font-size: 10px;
+	color: rgb(150,150,150);
+}
+.social-user-card .username, .social-user-card .email, .social-user-card .post-to-wall{
+	clear: left;
+	float: left;
+	padding: 3px;
+}
+.social-user-card .username a, .social-user-card .disconnect a{
+	color: rgb(90,170,230);
+	text-decoration: none;
+	cursor: pointer;
+}
+.social-user-card .disconnect a{
+	float: right;
+	color: rgb(200,50,50);
+}
+.social-user-card a:hover{ text-decoration: underline; }
+.post-to-list, .pages, .follow-selection{
+	display: block;
+	float: left;
+	padding: 10px;
+	color: rgb(100,100,100);
+}
+.pages{
+	padding: 0px;
+	list-style: none;
+}
+.pages li{
+	padding: 4px 0;
+	margin: 0;
+}
+label:hover{
+	cursor: pointer;
+	color: rgb(20,130,210);
+	text-decoration: underline;
+}
+.pages input{
+	padding: 0;
+	margin: 0 6px 0 0;
+}
+.post-to-list{ margin-top: 10px; }
+.option-headline{ 
+	font-size: 13px; 
+	margin-bottom: 10px;
+}

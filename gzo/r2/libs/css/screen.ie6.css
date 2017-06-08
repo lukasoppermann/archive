@@ -1,0 +1,96 @@
+#header{
+	background: none;
+	position: relative;
+	margin: 30px 0px 0px -10px;
+	padding: 5px 18px 5px 15px;	
+	width: 947px;
+	height: 350px;	
+}
+#logo img{
+	display: none;
+}
+#logo{
+	background: #000 url('../../media/layout/r2_logo.jpg') no-repeat;
+	width: 165px;
+	height: 351px;
+}
+#centered{
+	margin: 0 auto;
+	text-align: left;
+	height: 100%;
+	width: 940px;
+}
+#container{
+	padding-top: 0px;
+	padding-bottom: 30px;
+	margin-left: 2px;
+	background: #fff;
+}
+#footer{
+	left: 0px;
+	bottom: 0px;
+	position: absolute;
+}
+#footer a{
+	color: #d4d4d4 !important;
+}
+#sidebar{
+	background: #f2f2f2;
+
+}
+#nav{
+	background-position: right bottom;
+}
+a.link{
+	color: #FF7E00;
+}
+#content{
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 10px 5px;
+	background: #fff;
+}
+#content_bottom{
+	position: relative;
+	float: left;
+	width: 100%;
+	background: #fff;
+	height: 10px;
+	margin-bottom: 50px;
+}
+#content_top{
+	position: relative;
+	float: left;
+	width: 100%;
+	background: #fff;
+	height: 100px;
+}
+.active{
+	font-weight: bold;
+}
+#main_content{
+	float: left;
+	width: 740px;
+	overflow: visible;
+}
+#main_content div.news{
+	position: relative;
+	float: right;
+	width: 170px;
+	padding: 2px 0px 5px 10px;
+	margin: 0px 10px 20px 0px;
+	border-left: 1px solid #d6d6d6;
+}
+#main_content div.news h4{
+	width: 170px;
+	display: block;
+	margin: 0px 0px 10px 0px;
+	color: #FF7E00;
+	font-weight: bold;
+}
+#main_content div.news .referral{
+	margin: 10px 0px 10px 0px;
+	float: right;
+	display: block;
+}

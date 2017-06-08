@@ -1,0 +1,132 @@
+.content .text{
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+section{ 
+	margin-top: 7%; 
+	margin-bottom: 20px;
+}
+/* -------------------------- */
+/* quotes */
+.quote, .quote .quote-box{
+	float: left;
+	display: block;
+	position: relative;
+}
+.quote{
+	font-size: 170%;
+	line-height: 140%;
+}
+.mobile .quote{
+	font-size: 120%;
+	line-height: 120%;
+}
+.mobile.landscape .quote{
+	font-size: 140%;
+	line-height: 140%;
+}
+.quote .quote-box{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	transition: color .5s ease;   
+	-webkit-transition: color .5s ease;
+	-moz-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	-ms-transition: color .5s ease;
+}
+.quote.left .quote-box{ padding: 0px 25px 10px 20px; }
+.quote.right .quote-box{ padding: 0 0px 10px 45px; }
+.quote-box:before{
+	content: "“";
+	display: block;
+	position: absolute;
+	margin-right: 10px;
+	font-size: 180%;
+	left: 0px;
+}
+.right .quote-box:before{ left: 25px; }
+.active .quote .quote-box{ color: rgb(80,160,180); }
+.tablet-small .quote .quote-box, .mobile .quote .quote-box{ padding: 5px 175px 10px 0px; }
+.tablet-small .quote .quote-box:before{ 
+	left: -10px;
+	margin-right: 0px;
+	font-size: inherit;
+}
+.mobile .quote .quote-box:before{
+	left: 0px;
+	display: inline-block;
+	position: relative;
+	margin-right: 0px;
+	font-size: inherit;
+}
+.tablet-small .quote{
+	margin-top: 40px;
+}
+/* -------------------------- */
+/* about icons */
+.about-icon{
+	position: relative;
+	float: right;
+	margin-right: 25px;
+	display: block;
+	z-index: 10;
+	height: 150px;
+	width: 150px;
+	background-color: rgb(80,160,180);
+	border-radius: 150px;
+	transition: background .6s ease;   
+	-webkit-transition: background .6s ease;
+	-moz-transition: background .6s ease;
+	-o-transition: background .6s ease;
+	-ms-transition: background .6s ease;
+}
+.right .about-icon{ margin: 0 0 0 25px; }
+.active .about-icon{ background-color: rgb(245,160,10); }
+.tablet-small .about-icon, .mobile .about-icon{
+	margin: 5px 0 0 25px !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.about-icon .icon{
+	background-position: -270px -80px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 120px;
+	height: 120px;
+}
+.vision .icon{ background-position: -270px 0px; }
+.intelligent-design .icon{ background-position: -390px 0px; }
+.modern-branding .icon{ background-position: -270px -120px; }
+.interface-design .icon{ background-position: -390px -120px; }
+/* -------------------------- */
+/* active bg */
+.mobile .active-bg{ display: none; }
+.active-bg{
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	display: block;
+	background: rgb(245,245,245);
+	opacity: 0;
+	transition: margin, opacity .5s ease;   
+	-webkit-transition: margin, opacity .5s ease;
+	-moz-transition: margin, opacity .5s ease;
+	-o-transition: margin, opacity .5s ease;
+	-ms-transition: margin, opacity .5s ease;
+}
+.active .active-bg{
+	opacity: 1;	
+	transition: margin .5s ease;
+	-moz-transition: margin .5s ease;
+	-webkit-transition: margin .5s ease;
+	-o-transition: margin .5s ease;
+	-ms-transition: margin .5s ease;
+}
+.active-bg.left{ margin-left: -100%; }
+.active-bg.right{ margin-left: 150%; }
+.active .active-bg.left, .active .active-bg.right{ margin-left: 0 !important; }
+.tablet-small .active .active-bg.left, .tablet-small .active .active-bg.right{ margin-left: 15px !important; }

@@ -1,0 +1,338 @@
+/*------------------------*/
+/* Forms */
+form, fieldset, select, input, textarea, label{ 
+	position: relative;	
+	font-size: inherit;
+	color: inherit;
+	padding: 0;
+	border: 0;
+}
+input, textarea{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+	border-radius: 4px;
+	-moz-border-radius: 4px;	
+	padding: 7px;
+	z-index: 1;	
+}
+input, textarea{
+	border: 1px solid rgb(200,200,200);
+}
+input:focus, textarea:focus{ 
+	border: 1px solid rgb(255,220,0);
+	box-shadow: inset 0 0 4px rgb(200,200,200), 0 0 4px rgb(255,220,0);
+	-webkit-box-shadow: inset 0 0 4px rgb(200,200,200), 0 0 4px rgb(255,220,0);
+	-moz-box-shadow: inset 0 0 4px rgb(200,200,200), 0 0 4px rgb(255,220,0);
+}
+.form-box{
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;		
+}
+.form-box.inlinelabel{
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(245,245,245)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(245,245,245))); /* for webkit browsers */
+}
+div.form-box *:focus{
+	outline: none;
+	outline: 0;
+}
+input[type="text"], input[type="password"], textarea, input[type="file"]{
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+textarea.chars-200{
+	height: 45px;
+	resize:none;
+}
+textarea.chars-500{
+	height: 85px;
+	resize:none;
+} 
+.form-box input, .form-box textarea{ 
+	position: relative;
+	float: left;
+	padding: 6px 5px; 
+	background: none;
+}
+.form-box.disabled label{ color: rgb(200,200,200); }
+.form-box.disabled input{ 
+	color: rgb(200,200,200);	
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(225,225,225);	
+}
+/*------------------------*/
+/* Button */
+div.button{ 
+	margin: 5px 0 0 0; 
+	border: 1px solid rgb(255,255,255); 
+}
+.button > input, .button > span.button-style{
+	padding: 5px 15px;
+	border: 1px solid rgb(200,200,200);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	text-shadow: rgb(255,255,255) -1px -1px 0;
+	cursor: pointer;
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */		
+}
+.button input:hover, .button span.button-style:hover{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+}
+.button input:active, .button span.button-style:active{
+	box-shadow: inset 0 0 3px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 3px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 3px rgb(200,200,200);
+}
+.reset{
+	padding: 5px 5px;
+	margin: 0 10px;
+	cursor: pointer;
+	display: block;
+}
+/*------------------------*/
+/* Label */
+.inlinelabel label{
+	height: 13px;
+	color: rgb(150,150,150);
+	position: absolute;	
+	top: 7px;
+	left: 7px;
+}
+.disabled label{ color: rgb(200,200,200); }
+label.focus { color: rgb(200,200,200); }
+label.has-text{ opacity: 0.0; -webkit-transition-duration: 0s; }
+div.textarea:not(.inlinelabel) > label{
+	padding: 5px;
+	display: block;
+	margin-top: 5px;
+	color: rgb(150,150,150);
+	text-shadow: rgb(255,255,255) 1px 1px 0;	
+}
+div.upload label{
+	padding-bottom: 5px;
+	display: block;	
+}
+/*------------------------*/
+/* Toggle input field */
+.input-toggle{
+	width: 25px;
+	height: 26px;
+	position: absolute;
+	right: 0;
+	padding-left: 5px;
+	top: 2px;
+	z-index: 5;
+}
+input.with-toggle{
+	padding-right: 30px !important;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+/*------------------------*/
+/* Drop down styles*/
+div.selectbox-wrapper {
+	position: absolute;
+	z-index: 10;
+	margin-top: 0px;
+	padding: 0px;
+}
+/*Drop down list styles*/
+div.selectbox-wrapper ul {
+	position: relative;
+	display: block;
+	float: left;
+	width: 174px;
+	border: 1px solid rgb(200,200,200);
+	padding: 1px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(245,245,245)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(245,245,245))); /* for webkit browsers */
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 1px rgba(0,0,0,0.5);	
+}
+/* Selected item in dropdown list*/
+div.selectbox-wrapper ul li.selected, div.selectbox-wrapper ul li.selected.current { 
+	width: 174px;
+	background-color: rgb(255,220,70);
+	background-image: -moz-linear-gradient(top, rgb(255,220,70), rgb(250,205,35)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,220,70)), to(rgb(250,205,35))); /* for webkit browsers */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	color: #000;	
+}
+/* Hover state for dropdown list */
+div.selectbox-wrapper ul li.current { 
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb(230,230,230)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(240,240,240)), to(rgb(230,230,230))); /* for webkit browsers */
+}
+/* Drop down list items style*/
+div.selectbox-wrapper ul li{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box	
+	cursor: pointer;
+}
+div.selectbox-wrapper ul li:first-child{
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+}
+div.selectbox-wrapper ul li:first-child:before{
+	display: block;
+	right: 5px;
+	top: 2px;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../media/layout/formandsystem_icons_black.png');
+	background-position: -64px 0;
+	position: absolute;
+	z-index: 15;
+	content: "";
+	overflow: hidden;
+	background-repeat: no-repeat;	
+}
+div.selectbox-wrapper ul li:last-child{
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+}
+/* Look and feel of select box */
+input.selectbox{
+	margin: 0px 5px 10px 0px;
+	width: 100%; /* Resize Width */
+	display: block;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid rgb(200,200,200);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(245,245,245)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(245,245,245))); /* for webkit browsers */
+	
+}
+.select input:focus{
+	box-shadow: inset 0 0 4px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 4px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 4px rgb(200,200,200);
+}
+/* Errors */
+form div.error{
+	border: 1px solid #C40000;
+	background: #FED8D8;
+	color: #900000;
+	padding: 5px;
+	margin: 5px 0;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	float: left;
+}
+
+#uploadframe{
+	max-height: 70px;
+	overflow: hidden;
+}
+/*------------------------*/
+/* box-field*/
+div.box-field{
+	width: 280px;
+	float: left;
+	border: 1px solid rgb(255,255,255);
+	border-radius: 4px;
+	margin: 20px 0 0 0;
+	padding: 1px 1px 5px 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 3px rgb(125,125,125);
+	-webkit-box-shadow: inset 0 0 3px rgb(125,125,125);
+	-moz-box-shadow: inset 0 0 3px rgb(125,125,125);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */	
+}
+div.box-field.box-full{
+	width: 100%;
+}
+div.box-field.float-right{ float: right; }
+div.box-field h4{
+	float: left;
+	display: block;
+	width: 100%;
+	padding: 12px 15px;
+	margin: 0 0 5px 0;
+	height: 35px;
+	color: rgb(150,150,150);
+	font-size: 12px;
+	font-weight: bold;
+	box-shadow: inset 0 0 1px 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+div.box-field h4 input[type='checkbox']{
+	float: left;
+	margin: 1px 10px 0 0;
+}
+div.box-field .form-box{ 
+	margin: 5px 5px; 
+	width: 270px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+div.box-field div.field-wrapper{
+	width: 270px;
+	display: block;
+	float: left;
+	margin: 0 13px;
+}
+
+hr.line{
+	border: 1px solid rgb(200,200,200);
+	border-width: 1px 0 0 0;
+	margin: 15px 0 15px 5px;
+	width: 270px;
+	display: block;
+	float: left;
+}
+div.box-field .form-box textarea{
+	height: 100px;
+}
+.form-box textarea.max-150{
+	height: 70px;
+}

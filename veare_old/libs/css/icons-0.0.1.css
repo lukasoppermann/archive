@@ -1,0 +1,35 @@
+/*------------------*/
+/* nav icons */
+.portfolio .icon{ background-position: -150px 0px; }
+.blog .icon{ background-position: -150px -30px; }
+.about .icon{ background-position: -150px -60px; }
+.labs .icon{ background-position: -150px -90px; }
+.contact .icon{ background-position: -150px -120px; }
+/*------------------*/
+/* Icons */
+.icon, .icon-small{
+	margin-top: -2px;
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+.icon-small{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	text-indent: -9999px;
+}
+/* icons */
+.icon.case{ background-position: -150px 0; }
+.icon.tag{ background-position: -210px -90px; }
+/* small icons */
+.icon-small.mail{ background-position: -180px 0px; }
+.icon-small.twitter{ background-position: -180px -60px; }
+.icon-small.dribbble{ background-position: -180px -91px; }
+.icon-small.xing{ background-position: -180px -121px; }
+.icon-small.linkedin{ background-position: -180px -152px; }
+/* mobile */
+.mobile .icon-small.linkedin{ background-position: -240px 0px; }
+.mobile .icon-small.twitter{ background-position: -240px -30px; }
+.mobile .icon-small.dribbble{ background-position: -240px -60px; }
+.mobile .icon-small.xing{ background-position: -240px -90px; }

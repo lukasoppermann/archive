@@ -1,0 +1,13 @@
+#file_uploadQueue, #file_uploadQueue div, #file_uploadQueue span, #file_uploadQueue p{
+	display: none;
+	font-size: 10px !important;
+	font-family: arial !important;
+	float: left !important;
+	display: block;
+}
+#notice{
+	padding: 5px 0;
+	display: block;
+	font-size: 10px;
+	font-family: arial;	
+}

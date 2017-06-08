@@ -1,0 +1,187 @@
+#images{
+	position: relative;
+	float: left;
+	display: block;
+	z-index: 1;
+}
+#images .preview{
+	width: 150px;
+	height: 165px;
+	float: left;
+	margin: 15px 0 0 15px;
+	position: relative;
+	background: rgb(255,255,255);
+	border-radius: 3px;
+	padding: 5px;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+}
+#images .preview img{ display: inline-block; }
+#images .imageHolder{
+	width: 150px;
+	height: 140px;
+	border-radius: 3px;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;	
+	background: rgb(255,255,255);
+}
+#images .imageHolder:before{
+	content: "";
+	display: block;
+	width: 150px;
+	height: 140px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+}
+#images .uploaded{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	display: none;
+}
+#images .preview.done .uploaded{ display: none; }
+#images .progressHolder{
+	z-index: 1;
+	margin-top: 8px;
+	float: left;
+	border-radius: 3px;
+	background: rgb(250,250,250);
+	box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+	height: 14px;
+	width: 100%;
+}
+#images .progress{
+	border-radius: 3px;
+	background-color: rgb(90,170,230);
+	background-image: -moz-linear-gradient(top, rgb(90,170,230), rgb(20,130,210));
+	background-image: -webkit-linear-gradient(top, rgb(90,170,230), rgb(20,130,210));
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.25);
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+#images .preview.upload-done .progress{ width:100% !important; }
+#images .preview.upload-done .progressHolder{
+	margin-top: -20px;
+	transition: all .4s ease 1s;
+	-webkit-transition: all .4s ease 1s;
+	-moz-transition: all .4s ease 1s;
+	-o-transition: all .4s ease 1s;
+	-ms-transition: all .4s ease 1s;
+}
+#images .preview.done .social-channels{ display: block; }
+#images .preview .info{
+	display: none;
+	position: absolute;
+	text-align: left;
+	bottom: 5px;
+	right: 5px;
+	font-family: Georgia;
+	color: rgb(255,255,255);
+	font-style: italic;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 2px 0 2px 7px;
+	width: 20px;
+	height: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	border-radius: 20px;
+	background: rgba(0,0,0,0.75);
+	cursor: pointer;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.15);
+}
+#images .preview.done:hover .info, #images .preview.done:hover .close{ display: block; }
+#images .preview .info:hover{
+	background: rgb(255,255,255);
+	color: rgb(90,170,230);
+}
+#images .preview .close{
+	display: none;
+	color: rgb(255,255,255);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 27px;
+	height: 27px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	padding: 3px 0 2px 5px;
+	background: rgb(0,0,0);
+	border: 3px solid rgb(255,255,255);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.35);
+}
+#images .preview .close:hover{ background: rgb(90,170,230); }
+#images .preview.done:hover .social-channels .channel{ opacity: 0.25; }
+#images .preview .social-channels{
+	display: none;
+	float: right;
+	margin: 2px 0 5px 0;
+	padding: 3px;
+}
+#images .preview .social-channels .channel{
+	opacity: 0;
+	float: left;
+	color: rgb(150,150,150);
+	padding: 2px 5px;
+	margin: 0 0 0 3px;
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+}
+#images .preview.done .social-channels .channel.active, #images .preview.done:hover .social-channels .channel.all{ opacity: 1; }
+#images .preview.done .social-channels .channel:hover{
+	color: rgb(90,170,230);	
+	text-shadow: rgba(90,170,230,0.5) 0px 0px 2px;
+}
+#images .preview .social-channels .channel.all{ padding-top: 5px; }
+#images .preview .social-channels .cover, #images .preview .social-channels .module, #images .preview .social-channels .news, #images .preview .social-channels .twitter, #images .preview .social-channels .facebook{
+	width: 20px;
+	height: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	background: url(../../layout/worx_sprite.png);
+	background-position: -40px -40px;
+}
+#images .preview .social-channels .cover{ background-position: -180px -40px; }
+#images .preview .social-channels .news{ background-position: -80px -40px; }
+#images .preview .social-channels .module{ background-position: -140px -40px; }
+#images .preview .social-channels .facebook{ background-position: -60px -40px; }
+#images .preview .social-channels .active{ opacity: 1; }
+#images .preview .social-channels .cover.active{ background-position: -180px -60px; }
+#images .preview.done .social-channels .news.active{ background-position: -80px -60px; }
+#images .preview.done .social-channels .module.active{ background-position: -140px -60px; }
+#images .preview.done .social-channels .facebook.active{ background-position: -60px -60px; }
+#images .preview.done .social-channels .twitter.active{ background-position: -40px -60px; }
+#images .preview.done .social-channels .news:hover, #images .preview.done .social-channels .twitter:hover, #images .preview.done .social-channels .facebook:hover{ opacity: 0.5; }
+#images .preview .social-channels .active:hover{ opacity: 1; }

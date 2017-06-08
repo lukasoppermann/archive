@@ -1,0 +1,547 @@
+/*------------------------*/
+/* General */
+*{ font-family: "Helvetica", "Arial", Sans-serif; }
+
+html, body{
+	font-size: 100%; /* Avoids IE 5-7 bug with EM fonts */
+	font-size: 12px;
+	line-height: 1.2;	
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	height: auto;	
+	margin: 0;
+	padding: 0;
+}
+html{
+	background-color: rgb(240,240,240);
+}
+#container{
+	background-image: -moz-linear-gradient(top, rgb(250,250,250), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(250,250,250)), to(rgb(240,240,240))); /* for webkit browsers */
+}
+.link{ text-decoration: underline; }
+.strike{ text-decoration: line-through; }
+.ulist{ list-style: disc; }
+.rounded{ 
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+textarea{
+	resize:none;
+}
+/*------------------------*/
+/* Resets */
+img, a img{ border: 0; }
+li{ list-style: none; }
+:focus, :active{ outline: none; outline: 0;	}
+a, a:hover, a:active, a:visited{ color: inherit; text-decoration: underline; outline: none; }
+fieldset{ border: 0; }
+/* Padding & Margin reset */
+html, body, div, span, textarea, input,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, cite, code,
+img, q, small, strike, strong, sub, sup, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table{ border-collapse: collapse; border-spacing: 0; }
+/*------------------------*/
+/* Text Highlight */
+::selection, ::-moz-selection, ::-webkit-selection{
+	background:rgb(255,220,0);
+	color:#000;				
+}
+/*------------------------*/
+/* Utilities */
+.clear-both{ clear: both; }
+.clear-left{ clear: left; }
+.clear-right{ clear: right; }
+.float-left{ float: left; !important}
+.float-right{ float: right; !important}
+.hidden{ visibility: hidden; }
+/*------------------------*/
+/* Layout */
+#container{
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	float: left;
+	background: url('../../media/layout/formandsystem_noise.png');
+}
+#header{
+	width: 100%;
+	height: 45px;
+}
+#logo{
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	height: 45px;	
+	display: block;
+	float: left;
+}
+#footer{
+	width: 100%;
+	height: 29px;
+	margin-top: -30px;
+	position: fixed;
+	bottom: 0;
+	z-index: 99;
+}
+#footer a{
+	float: left;
+	display: block;
+	padding: 8px 5px 5px 10px;
+}
+#main_content{
+	float: left;
+	position: relative;
+	width: auto;
+	min-width: 935px;
+	max-width: 1400px;
+	padding: 0 0 50px 25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#main_content h1{
+	padding: 20px 0 10px 0;	
+}
+#main_content p{
+	max-width: 500px;
+	margin-bottom: 10px;
+	line-height: 1.4em;
+}
+/*------------------------*/
+/* Menus */
+/* Main Menu */
+#header .menu, #top_right{
+	margin: 0 0 0 100px;
+	height: 25px;
+	padding: 10px;
+	font-size: 11px;
+	list-style: none;
+	float: left;
+}
+#top_right{
+	float: right;
+	margin-right: 10px;
+}
+#header .menu li a, #top_right li a{
+	padding: 5px 12px 5px 10px;
+	display: block;
+	float: left;
+	position: relative;
+	color: inherit;	
+	text-decoration: none;	
+}
+
+#header .menu li.last a, #top_right li.last a{
+	padding-right: 12px;
+}
+#header .menu > li, #top_right > li{
+	display: block;	
+	position: relative;
+	float: left;
+	margin-left: 0;
+	height: 25px;
+	padding: 0 0 0 5px;
+	background: url('../../media/layout/formandsystem_navbtn_middle_passive.png') top left no-repeat;
+}
+#header .menu > li span, #top_right > li span{
+	margin: 0;
+	display: block;
+	float: left;
+	height: 20px;
+	padding: 5px 5px 0 0;
+	background: url('../../media/layout/formandsystem_navbtn_middle_passive.png') top right no-repeat;
+}
+#header .menu > li.active, #header .menu > li:hover, #top_right > li.active, #top_right > li:hover{
+	background: url('../../media/layout/formandsystem_navbtn_middle_active.png') top left no-repeat;
+}
+#header .menu > .active span, #header .menu > li:hover span, #top_right > .active span, #top_right > li:hover span{
+	background: url('../../media/layout/formandsystem_navbtn_middle_active.png') top right no-repeat;
+}
+#header .menu > li.first, #top_right > li.first{
+	display: block;	
+	float: left;
+	margin-left: 0;
+	height: 25px;
+	padding: 0 0 0 5px;
+	background: url('../../media/layout/formandsystem_navbtn_left_passive.png') top left no-repeat;
+}
+#header .menu > li.first span, #top_right > li.first span{
+	margin: 0;
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	float: left;
+	height: 20px;
+	padding: 5px 5px 0 0;
+	background: url('../../media/layout/formandsystem_navbtn_left_passive.png') top right no-repeat;
+}
+#header .menu > li.first.active, #header .menu > li.first:hover, #top_right > li.first.active, #top_right > li.first:hover{
+	background: url('../../media/layout/formandsystem_navbtn_left_active.png') top left no-repeat;
+}
+#header .menu .first.active span, #header .menu li.first:hover span, #top_right .first.active span, #top_right li.first:hover span{
+	background: url('../../media/layout/formandsystem_navbtn_left_active.png') top right no-repeat;
+}
+#header .menu > li.last, #top_right > li.last{
+	display: block;	
+	float: left;
+	margin-left: 0;
+	height: 25px;
+	padding: 0 5px 0 0;
+	background: url('../../media/layout/formandsystem_navbtn_right_passive.png') top right no-repeat;
+}
+#header .menu > li.last span, #top_right > li.last span{
+	margin: 0 0 0 0;
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	float: left;
+	height: 20px;
+	padding: 5px 0 0 5px;
+	background: url('../../media/layout/formandsystem_navbtn_right_passive.png') top left no-repeat;
+}
+#header .menu > li.last.active, #header .menu > li.last:hover, #top_right > li.last.active, #top_right > li.last:hover{
+	background: url('../../media/layout/formandsystem_navbtn_right_active.png') top right no-repeat;
+}
+#header .menu > .last.active span, #header .menu > li.last:hover span, #top_right > .last.active span, #top_right > li.last:hover span{
+	background: url('../../media/layout/formandsystem_navbtn_right_active.png') top left no-repeat;
+}
+#top_right li.img_abmelden a, #top_right li.last.img_abmelden a, #top_right li.first.img_abmelden a{
+	padding: 0 2px 0 2px;
+	overflow: hidden;
+}
+#top_right li.img_abmelden a img{
+	margin-top: -3px;
+	width: 20px;
+	height: 20px;
+}
+/* Submenus */
+#header .menu li ul{
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	z-index: 5;
+	width: 150px;
+}
+#header .menu li:hover ul{ /* :hover*/
+	display: block;
+	box-shadow: 1px 1px 3px rgb(90,90,90);
+	-webkit-box-shadow: 1px 1px 3px rgb(90,90,90);
+	-moz-box-shadow: 1px 1px 3px rgb(90,90,90);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	color: rgb(90,90,90);
+	font-size: 12px;	
+}
+#header .menu li ul li{
+	width: 100%;
+	height: 30px !important;
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0;
+	background: rgb(245,245,245);	
+}
+#header .menu li ul li:hover{
+	width: 100%;
+	height: 30px !important;
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0;
+	background: rgb(235,235,235);		
+}
+#header .menu li ul li span{
+	width: 100%;
+	height: 30px !important;
+	background: transparent !important;	
+	margin: 0;
+	padding: 0 !important;		
+}
+#header .menu li ul li a{
+	height: 11px;
+	width: 100%;
+	margin: 0;
+	padding: 9px 10px 10px 10px;	
+	display: block;
+	position: relative;
+	float: left;	
+}
+#header .menu ul li.first, #top_right ul li.first{
+	display: block;	
+	float: left;
+	margin-left: 0;
+	height: 30px !important;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+}
+#header .menu ul li.last, #top_right ul li.last{
+	display: block;	
+	float: left;
+	margin-left: 0;
+	height: 30px !important;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;	
+}
+/*------------------------*/
+/* Breadcrumbs Menu */
+#breadcrumbs{
+	font-size: 11px;
+	float: left;
+	position: relative;
+	display: block;	
+	height: 30px;
+	width: 100%;
+}
+#breadcrumbs div.left{
+	float: left;	
+}
+#breadcrumbs div.right{
+	position: absolute;
+	right: 5px;
+}
+#breadcrumbs span, #breadcrumbs a{
+	display: block;
+	float: left;	
+	padding: 9px 10px 8px 10px;
+}
+#breadcrumbs span.separator{
+	display: block;
+	float: left;	
+	padding: 9px 0 8px 0;
+}
+#breadcrumbs span a{
+	font-size: 11px;	
+	text-decoration: none;
+	font-weight: bold;
+}
+/* Footer Menu */
+#copyright{
+	float: right;
+	margin: 0 20px 2px 10px;
+}
+/*------------------------*/
+/* UI Elements, Buttons, Bars & Fields */
+.button-style-passive{
+	background-color: rgb(200,200,200);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(225,225,225)), to(rgb(200,200,200))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(220,220,220), rgb(215,215,215), rgb(205,205,205), rgb(195,195,195)); /* for firefox 3.6+ */	
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: 0 1px 0 rgb(175,175,175), 0 -1px 0 rgb(220,240,240);
+	-webkit-box-shadow: 0 1px 0 rgb(175,175,175), 0 -1px 0 rgb(240,240,240);
+	-moz-box-shadow: 0 1px 0 rgb(210,210,210);		
+	border: 1px solid rgb(170,170,170);
+	border-width: 0 1px 1px 0;	
+	
+}
+.button-style-active, .button-style-passive.hover:hover{
+	background-color: rgb(180,180,180);
+	background-image: url('../../media/layout/formandsystem_gradiant_dark.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(205,205,205)), to(rgb(180,180,180))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(205,205,205), rgb(180,180,180)); /* for firefox 3.6+ */	
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: 0 1px 0 rgb(155,155,155), 0 -1px 0 rgb(240,240,240);
+	-webkit-box-shadow: 0 1px 0 rgb(155,155,155), 0 -1px 0 rgb(240,240,240);
+	-moz-box-shadow: 0 1px 0 rgb(155,155,155), 0 -1px 0 rgb(240,240,240);
+}
+
+.footer-gradiant{
+	background-color: rgb(200,200,200);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(200,200,200)), to(rgb(160,160,160))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(200,200,200), rgb(160,160,160)); /* for firefox 3.6+ */	
+	border-top: 1px solid rgb(215,215,215);
+	box-shadow: 0 -1px 0 rgb(170,170,170), 0 -2px 0 rgb(215,215,215);
+	-webkit-box-shadow: 0 -1px 0 rgb(170,170,170), 0 -2px 0 rgb(215,215,215);	
+	-moz-box-shadow: 0 -1px 0 rgb(170,170,170), 0 -2px 0 rgb(215,215,215);	
+}
+.header-gradiant{
+	background-color: rgb(50,55,60);
+	background-image: url('../../media/layout/formandsystem_navigation_bg.png');
+	background-repeat: repeat-x;	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(75,80,85)), to(rgb(50,55,60))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(75,80,85), rgb(50,55,60)); /* for firefox 3.6+ */		
+	border-top: 1px solid rgb(105,110,115);
+	border-bottom: 1px solid rgb(75,80,85);
+	box-shadow: 0 1px 0 rgb(30,35,40), 0 2px 0 rgb(170,170,170), 0 3px 0 rgb(190,215,215);	
+	-webkit-box-shadow: 0 1px 0 rgb(30,35,40), 0 2px 0 rgb(170,170,170), 0 3px 0 rgb(215,215,215);			
+	-moz-box-shadow: 0 1px 0 rgb(30,35,40), 0 2px 0 rgb(130,130,130), 0 3px 0 rgb(180,180,180);	
+}
+.breadcrumbs-gradiant{
+	background-color: rgb(200,200,200);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(160,160,160)), to(rgb(200,200,200))); /* for firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, rgb(160,160,160), rgb(200,200,200)); /* for firefox 3.6+ */	
+	-webkit-box-shadow: inset 0 0 2px rgb(90,90,90);	
+	-moz-box-shadow: inset 0 0 2px rgb(90,90,90);	
+}
+/*------------------------*/
+/* Text-colors */
+.tcd1{
+	color: rgb(150,150,150);
+}
+.tcd1 a:hover, .tcd1 .hover:hover{
+	color: rgb(115,115,115);
+}
+.tcd2{
+	color: rgb(115,115,115);
+}
+.tcd2 a:hover, .tcd2 .hover:hover{
+	color: rgb(90,90,90);
+}
+.text-darkest, .tcd3{
+	color: rgb(90,90,90);	
+}
+.tcd4, .text-darkest a:hover, .text-darkest .hover:hover{
+	color: rgb(70,70,70);	
+}
+.tcl4, .text-lightest, .text-lighter a:hover, .text-lighter .hover:hover{
+	color: rgb(255,255,255);	
+}
+.tcl3{
+	color: rgb(235,235,235);
+}
+.text-lighter, .tcl2{
+	color: rgb(215,215,215);	
+}
+.tcl1{
+	color: rgb(200,200,200);	
+}
+.emboss-dark, .icd1{
+	text-shadow: rgb(90,90,90) 1px 1px 0;
+}
+.emboss-darker{
+	text-shadow: rgb(70,70,70) 1px 1px 0;
+}
+.emboss-darkest{
+	text-shadow: rgb(50,50,50) 1px 1px 0;
+}
+.emboss-lightest, .icl3{
+	text-shadow: rgb(255,255,255) 1px 1px 0;
+}
+.emboss-lightest .emboss-hover-darker a:hover, .emboss-lightest.emboss-hover-darker.hover:hover{
+	text-shadow: rgb(215,215,215) 1px 1px 0;
+}
+.emboss-lighter, .icl2{
+	text-shadow: rgb(225,225,225) 1px 1px 0;
+}
+.emboss-light, .icl1{
+	text-shadow: rgb(190,190,190) 1px 1px 0;
+}
+.emboss-light .emboss-hover-darker a:hover, .emboss-light.emboss-hover-darker.hover:hover{
+	text-shadow: rgb(160,160,10) 1px 1px 0;
+}
+.emboss-lighter .emboss-hover-darker a:hover, .emboss-lighter.emboss-hover-darker.hover:hover{
+	text-shadow: rgb(210,210,210) 1px 1px 0;
+}
+.emboss-hover-none:hover{
+	text-shadow: none;
+}
+.emboss-none, .emboss-none:hover{
+	text-shadow: none;
+}
+.scl1{
+	text-shadow: rgb(140,140,140) 1px 1px 0, rgb(160,160,160) 1px 1px 3px;	
+}
+.scl2{
+	text-shadow: rgb(140,140,140) 1px 1px 0, rgb(160,160,160) 1px 1px 3px;	
+}
+.scd1{
+	text-shadow: rgb(90,90,90) 1px 1px 0;	
+}
+.scd2{
+	text-shadow: rgb(70,70,70) 1px 1px 0;	
+}
+/*------------------------*/
+.cms-box{
+	border: 1px solid rgb(255,255,255);
+	border-radius: 4px;
+	padding: 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 3px rgb(125,125,125);
+	-webkit-box-shadow: inset 0 0 3px rgb(125,125,125);
+	-moz-box-shadow: inset 0 0 3px rgb(125,125,125);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+}
+.cms-box h2, .cms-box h3, .cms-box h4, .dialog h3, .dialog-box h3{
+	float: left;
+	display: block;
+	width: 100%;
+	padding: 12px 15px;
+	height: 35px;
+	color: rgb(150,150,150);
+	font-size: 12px;
+	font-weight: bold;
+	box-shadow: inset 0 0 1px 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+/*------------------------*/
+/* Notices */
+#notices
+{
+	position: absolute;
+	display: block;
+	width: 900px;
+	z-index: 1;
+	top: 90px;
+	min-height: 40px;
+}
+.notice{
+	float: left;
+	width: 100%;
+	border: 1px solid;
+	margin-bottom: 2px;
+	border-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;	
+	margin: 1px 25px 1px 20px;
+}
+.notice p{
+	padding: 10px 10px;
+}
+.deactivate, .deactivate a { background-color: #dedede !important; border-color: #888 !important; color: #888 !important; text-decoration: line-through; }
+.warning, .warning a{ background-color: #fefdba; border-color: #b7b632; color: #5f5e04;}
+.ui-nestedSortable-error, .error, .error a{ background: #fed8d8; border-color: #c40000; color: #900000;}
+.success, .success a{ background: #dff5c3; border-color: #508d00; color: #1f3601;}
+.information, .information a{ background: #cfedfa; border-color: #4c7ca1; color: #02193e; }

@@ -1,0 +1,331 @@
+/* Colors */
+.gradiant-grey-1{
+	background-color: rgb(200,200,200);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(225,225,225)), to(rgb(200,200,200))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(225,225,225), rgb(200,200,200)); /* for firefox 3.6+ */
+}
+.gradiant-grey-2{
+	background-color: rgb(180,180,180);
+	background-image: url('../../media/layout/formandsystem_gradiant_dark.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(205,205,205)), to(rgb(180,180,180))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(205,205,205), rgb(180,180,180)); /* for firefox 3.6+ */
+}
+.gradiant-grey-3, .gradiant-grey-2.hover:hover{
+	background-color: rgb(160,160,160);
+	background-image: url('../../media/layout/formandsystem_gradiant_dark.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(185,185,185)), to(rgb(160,160,160))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(185,185,185), rgb(160,160,160)); /* for firefox 3.6+ */
+}
+
+.gradiant-3-grey-1{
+	background-color: rgb(240,240,240);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235,235,235)), to(rgb(210,210,210))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(bottom, rgb(210,210,210), rgb(235,235,235), rgb(235,235,235)); /* for firefox 3.6+ */
+}
+
+/* Toggle-bar */
+.toggle-bar{
+	position: relative;
+	float: left;
+	display: block;
+	height: 24px;
+	padding: 0;
+}
+.toggle-bar li{
+	padding: 7px 5px 5px 5px;	
+	float: left;
+	display: block;
+	height: 12px;
+	border-right: 1px solid rgb(185,185,185);	
+}
+.toggle-bar li.active{
+	background-color: rgb(200,200,200);
+	background-image: url('../../media/layout/formandsystem_gradiant_light.png');	
+	background-repeat: repeat-x;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(205,205,205)), to(rgb(180,180,180))); /* for webkit browsers */
+	background-image: -moz-linear-gradient(top, rgb(205,205,205), rgb(180,180,180)); /* for firefox 3.6+ */
+}
+.toggle-bar li:first-child{
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+}
+.toggle-bar li:last-child{
+	border-right: none;	
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+}
+.toggle-bar a{
+	text-decoration: none;
+}
+/*------------------------*/
+/* forms general */
+textarea.chars-200{
+	height: 45px;
+	resize:none;
+}
+textarea.chars-500{
+	height: 85px;
+	resize:none;
+}
+#cke_content{
+	width: 570px;
+}
+div.form-box{
+	float: left;
+	position: relative;	
+	display: block;
+	clear: left;
+	margin-bottom: 10px;
+}
+div.form-box *:focus{
+	outline: none;
+	outline: 0;
+}
+.ui-selectmenu, ul.ui-selectmenu-menu{
+	padding: 0 30px 0 0; 
+	float: left;  
+	background-color: rgb(220,220,220);
+	border: 1px solid rgb(200,200,200);	
+}
+.ui-selectmenu-open{
+	box-shadow: 1px 1px 3px rgb(50,50,50);
+	-webkit-box-shadow: 1px 1px 3px rgb(50,50,50);
+	-moz-box-shadow: 1px 1px 3px rgb(50,50,50);
+}
+ul.ui-selectmenu-menu li, ul.ui-selectmenu-menu li a{ width: 100%; }
+/* specific forms */
+input.input-field, .combobox-field, input.password-field, textarea.textarea-field{
+	background-color: rgb(220,220,220);
+	border: 1px solid rgb(200,200,200);
+	width: 100%;
+}
+div.form-box.no-break{
+	clear: none;
+}
+div.combobox-field, div.combobox-field select, div.combobox-field input{
+	float: left;
+}
+div.combobox-field input{
+	padding: 0;
+	background: transparent;
+	border: 0;
+	padding: 7px 7px 7px 0;
+	font-size: 12px;	
+}
+
+
+#login_form{
+	width: 250px;
+	top: 150px; 
+	left: 50%;
+	margin-left: -125px;
+	position: absolute;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+}
+#login_form input[type="text"], #login_form input[type="password"]{
+	width: 100% !important;
+}
+
+
+.ads{
+	display: none !important;
+}
+
+
+/*------------------------*/
+.cms-box{
+	border: 1px solid rgb(255,255,255);
+	border-radius: 4px;
+	padding: 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 3px rgb(125,125,125);
+	-webkit-box-shadow: inset 0 0 3px rgb(125,125,125);
+	-moz-box-shadow: inset 0 0 3px rgb(125,125,125);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+}
+.cms-box h2, .cms-box h3, .cms-box h4, .dialog h3{
+	float: left;
+	display: block;
+	width: 100%;
+	padding: 12px 15px;
+	height: 35px;
+	color: rgb(150,150,150);
+	font-size: 12px;
+	box-shadow: inset 0 0 1px 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+
+
+/*------------------------*/
+/* Forms */
+/* default forms */
+form, fieldset, select, input, textarea, label{ 
+	float: left; 
+	position: relative;	
+	font-size: inherit;
+	color: inherit;
+	padding: 0;
+	border: 0;
+	font-size: 12px;	
+}
+form, fieldset, select, input[type="text"], input[type="password"], textarea, fieldset div:not(.button){
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.cke_skin_kama .cke_path form, fieldset, select, input[type="text"], input[type="password"], textarea{
+	width: 90%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+fieldset legend{
+	width: 100%;
+	background: rgb(255,245,25);
+	background-image: -moz-linear-gradient(top, rgb(255,245,25), rgb(250,210,30)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,245,25)), to(rgb(250,210,30))); /* for webkit browsers */	
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-bottom: 1px solid rgb(220,220,220);
+	margin-bottom: 10px;
+	padding: 10px;
+	float: left;
+	box-shadow: inset 0px 0px 3px #fff;
+	-webkit-box-shadow: inset 0px 0px 3px #fff;
+	-moz-box-shadow: inset 0px 0px 3px #fff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: rgb(160,120,30);
+	text-shadow: rgba(255,255,255,0.8) 1px 1px 0px;
+	font-weight: bold;
+}
+#login fieldset div.input, #login fieldset div.password{
+	padding: 0 10px;
+}
+fieldset div.button{
+	margin: 0 10px 10px 0;
+	padding: 0;
+}
+select, input, textarea{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(245,245,245)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(245,245,245))); /* for webkit browsers */
+	border-radius: 4px;
+	-moz-border-radius: 4px;	
+	padding: 7px;
+	z-index: 1;	
+}
+input:not([type="button"]):not([type="submit"]){
+	padding: 6px 5px;
+}
+select{ padding: 3px; }
+label{
+	padding: 10px 10px 10px 8px;
+	height: 13px;
+	z-index: 2;
+	color: rgb(150,150,150);	
+}
+
+label.focus { color: rgb(200,200,200); }
+.js label + input, .js label + textarea { margin-top: -30px; }
+
+label + input:focus, label + textarea:focus{ 
+	border: 1px solid rgb(255,220,0);
+	margin-top: -30px; 
+	box-shadow: inset 0 0 4px rgb(200,200,200), 0 0 4px rgb(255,220,0);
+	-webkit-box-shadow: inset 0 0 4px rgb(200,200,200), 0 0 4px rgb(255,220,0);
+	-moz-box-shadow: inset 0 0 4px rgb(200,200,200);
+}
+label.has-text{ opacity: 0.0; -webkit-transition-duration: 0s; }
+.button{ 
+	border: 1px solid rgb(255,255,255); 
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.button > input{
+	padding: 5px 15px;
+	border: 1px solid rgb(200,200,200);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	text-shadow: rgb(255,255,255) -1px -1px 0;
+	cursor: pointer;	
+}
+.button input:hover{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+}
+.button input:active{
+	box-shadow: inset 0 0 3px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 3px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 3px rgb(200,200,200);
+}
+
+/*------------*/
+.var-field ul{
+	border: 1px solid rgb(255,255,255);
+	border-radius: 4px;
+	padding: 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: inset 0 0 3px rgb(125,125,125);
+	-webkit-box-shadow: inset 0 0 3px rgb(125,125,125);
+	-moz-box-shadow: inset 0 0 3px rgb(125,125,125);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	overflow: hidden;	
+}
+.var-field ul li{
+	display: block;
+	float: left;
+	width: 100%;
+}
+/*------------------------*/
+#add_item div:not(.button){
+	padding-left: 10px;
+	width: 100%;
+}
+

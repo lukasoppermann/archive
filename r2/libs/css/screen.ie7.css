@@ -1,0 +1,18 @@
+#container{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#footer{
+	left: 0px;
+	position: absolute;
+	bottom: -30px;
+}
+#footer a{
+	color: #d4d4d4 !important;
+}
+#sidebar{
+	background-position: 158px top;
+}
+a.link{
+	color: #FF7E00;
+}

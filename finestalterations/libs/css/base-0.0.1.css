@@ -1,0 +1,472 @@
+/* basic */
+@font-face{
+	font-family: "Helvetica Neue Light";
+	src: url("../../media/layout/HelveticaNeueLTPro-UltLt.otf");
+}
+html, body{
+	float: left;	
+	background-color: rgb(0,0,0);
+	margin: 0;
+	padding: 0;
+	position: relative;
+	min-width: 900px;
+	width: 100%;
+	font-family: "Helvetica Neue Light", "Helvetica", Arial, Sans-serif;
+	font-size: 100%;
+	font-size: 12px;	
+}
+body{
+	position: relative;
+	float: left;
+	width: 100%;
+	overflow-y: scroll; /* Always show scroll bar*/
+}
+form, div, ul, li{
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+ul{
+	list-style-position: inside;
+}
+form, div{
+	display: block;
+}
+span, h1, h2, h3, h4, h5{
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+h1, h2{
+	font-size: 30px;
+}
+h1, h2, h3, h4, h5{
+	font-weight: normal !important;
+	font-family: "Helvetica Neue Light";
+	color: rgb(255,255,255);
+}
+img{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+textarea{
+	text-align: left;
+	font-family: "Helvetica Neue", "Helvetica", "arial", sans-serif;
+	font-size: 12px;
+	outline: none !important; 
+	resize: none;
+	overflow: auto;	
+}
+a{ 
+	cursor: pointer;
+	display: inline-block; 
+	color: inherit;
+	text-decoration: none;
+}
+:focus, :active{
+	outline: none !important; 
+	outline: 0 !important;
+	outline-color: transparent;
+	outline-style: none;
+}
+/*------------------------*/
+/* Utilities */
+.float-right{ float: right; }
+.float-left{ float: left; }
+/*------------------------*/
+/* Layout */
+#page_wrapper{
+	position: relative;
+	float: left;
+	left: 50%;
+	min-height: 100%;
+	padding: 0 20px 25px 20px;
+	width: 1000px;
+	margin-left: -520px;
+	background: rgb(50,50,50);
+}
+/*------------------------*/
+/* logo */
+#logo{
+	float: left;
+	width: 100%;
+	border-bottom: 15px solid rgb(50,50,50);
+}
+#logo .logo-link{
+	display: block;
+	height: 45px;
+	width: 350px;
+	margin: 20px 0 18px 43px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+	z-index: 10;
+	position: relative;
+}
+/*------------------------*/
+/* header */
+#header{
+	height: 120px;
+	width: 1000px;
+	background: rgb(0,0,0);	
+}
+#main_menu{
+	color: rgb(255,255,255);
+	list-style: none;
+	float: left;
+	border-top: 2px solid rgb(255,255,255);
+	border-bottom: 2px solid rgb(255,255,255);
+	background: rgb(50,50,50);
+	width: 100%;
+	margin-bottom: 20px;
+}
+#main_menu li{
+	float: left;
+	font-family: "Helvetica", Sans-Serif;
+	font-weight: thin;
+	font-size: 14px;
+}
+#main_menu li a{
+	padding: 10px 15px;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+#main_menu li a:hover{
+	color: rgb(250,250,250);
+}
+#main_menu li.active{
+	margin-bottom: -2px;
+	border-bottom: 2px solid rgb(230,0,5);
+	color: rgb(250,250,250);
+}
+#inquire{
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	width: 380px;
+	background: transparent;
+}
+#inquire:hover{
+	background: rgb(60,60,60);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.35);
+}
+#inquire .inquire-button{
+	background: rgb(60,60,60);
+	color: rgb(255,255,255);
+	font-size: 14px;
+	padding: 7px 25px;
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#inquire:hover .inquire-button{
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+#inquire .store-list{
+	display: none;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 14px;
+	list-style: none;
+	color: rgb(255,255,255);
+}
+#inquire:hover .store-list{
+	display: block;
+}
+#inquire .store{
+	float: left;
+	width: 96%;
+	border-bottom: 1px solid rgb(200,200,200);	
+	margin: 0 2%;
+}
+#inquire .store.more-stores{
+	border-bottom: 0px;
+}
+#inquire .store a{
+	float: left;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+#inquire .store a:hover .name{
+	text-decoration: underline;
+	color: rgb(230,0,5);
+}
+#inquire .store .name{
+	display: block;
+	float: left;
+	padding: 7px 5px;
+	width: 200px;
+}
+#inquire .store .tel{
+	display: block;
+	float: right;
+	padding: 7px 5px;
+	width: 140px;
+	text-align: right;
+}
+/*------------------------*/
+/* footer */
+#footer{
+	position: relative;
+	float: left;
+	width: 100%;
+	min-height: 100px;	
+}
+#footer .content{
+	float: left;	
+	width: 1000px;
+	height: 100%;
+	background-color: rgb(0,0,0);
+	padding-bottom: 55px;
+	left: 50%;
+	margin-left: -500px;
+}
+.footer-wrapper{
+	padding: 20px 0px 0 0;
+	left: 50%;
+	width: 1000px;
+	margin-left: -520px;
+	float: left;
+	border: 20px solid rgb(50,50,50);
+}
+#footer_bar{
+	z-index: 999;
+	width: 100%;
+	height: 51px;
+	background: rgb(0,0,0);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.35);
+}
+.footer-menu{
+	width: 1040px;
+	height: 45px;
+	margin: 2px 0 0 -520px;
+	left: 50%;
+	border-top: 2px solid rgb(255,255,255);
+	font-family: Helvetica, Sans-Serif;
+	color: rgb(255,255,255);
+	font-size: 14px;
+}
+.footer-menu ul{
+	margin: 0 10px;
+}
+.footer-menu li{
+	list-style: none;
+	float: left;
+}
+.footer-menu li a{
+	padding: 11px 15px;
+	display: block;
+	transition: all .75s ease .1s;   
+	-webkit-transition: all .75s ease .1s;
+	-moz-transition: all .75s ease .1s;
+	-o-transition: all .75s ease .1s;
+	-ms-transition: all .75s ease .1s;
+	background: rgb(0,0,0);
+}
+.footer-menu li.follow a{
+	padding: 8px 3px;
+}
+.footer-menu li a:hover{ background: rgb(45,45,45); }
+.footer-menu li.follow a:hover{ background: transparent; }
+/* footer content */
+#footer .content h3, .email-form h3{
+	float: left;
+	width: 100%;
+	color: rgb(235,235,235);
+	font-size: 36px;
+	font-weight: normal !important;
+	font-family: "Helvetica Neue Light";
+	margin-bottom: 15px;
+}
+.email-form{
+	float: left;
+	width: 310px;
+	margin-right: 30px;
+	margin-left: 20px;
+}
+#footer .email-form h3{
+	margin-bottom: 25px;
+}
+.email-form .input, .email-form .textarea{
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;	
+}
+.email-form .input input, .email-form .textarea textarea{
+	float: left;
+	font-size: 14px;
+	width: 288px;
+	padding: 9px 10px;
+	color: rgb(255,255,255);
+	border: 1px solid rgb(200,200,200);
+	background: rgb(0,0,0);
+}
+.email-form .input-button input{
+	width: 198px;
+	margin-right: 10px;
+}
+.email-form .input-button .submit{
+	float: left;
+	width: 78px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 14px;
+	height: 14px;
+	padding: 10px 0;
+	font-weight: bold;	
+	color: rgb(255,255,255);
+	background-color: rgb(50,50,50);
+	border: 1px solid rgb(0,0,0);
+	cursor: pointer;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease .5s;
+	-moz-transition: all .4s ease .5s;
+	-o-transition: all .4s ease .5s;
+	-ms-transition: all .4s ease .5s;
+}
+.email-form .input-button .submit:hover{
+	background-color: rgb(230,0,5);
+	background-image: -moz-linear-gradient(top, rgb(230,0,5), rgb(180,0,0));
+	background-image: -webkit-linear-gradient(top, rgb(230,0,5), rgb(180,0,0));
+	text-shadow: rgba(0,0,0,0.5) 0px 1px 1px;
+}
+.email-form .textarea textarea{
+	height: 140px;
+	margin-bottom: 10px;
+}
+.email-form h3:before{
+	font-size: 13px;
+	font-weight: normal;
+	content: "Your message has been sent. You will be contacted within 4 hrs. Thank you";
+	opacity: 0;
+	position: absolute;
+	color: rgb(100,170,20) !important;
+	text-shadow: rgb(100,170,20) 0px 0px 2px;	
+	transition: all .75s ease;   
+	-webkit-transition: all .75s ease;
+	-moz-transition: all .75s ease;
+	-o-transition: all .75s ease;
+	-ms-transition: all .75s ease;
+}
+.email-form.success h3:before{
+	opacity: 1;
+	bottom: -23px;
+	left: 0px;	
+}
+.email-form .error{
+	color: rgb(230,0,5);
+	box-shadow: inset 0px 0px 3px 0px rgb(230,0,5), inset 0px 0px 0px 1px rgb(200,0,5) !important;
+	-webkit-box-shadow: inset 0px 0px 3px 0px rgb(230,0,5), inset 0px 0px 0px 1px rgb(200,0,5) !important;
+	-moz-box-shadow: inset 0px 0px 3px 0px rgb(230,0,5), inset 0px 0px 0px 1px rgb(200,0,5) !important;
+}
+.email-form.newsletter{
+	padding: 20px 0 0 20px;
+}
+.email-form.newsletter .input-button{
+	height: 40px;
+}
+.email-form.newsletter .input-button .button{
+	float: right;
+	width: 120px;
+	height: 40px;
+	margin-right: 0;
+}
+.indicates-required{
+	float: left;
+	font-size: 12px;
+	color: rgb(255,255,255);
+}
+.email-form.newsletter .mc-field-group{
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: rgb(255,255,255);
+}
+.email-form.newsletter .mc-field-group .asterisk{
+	color: rgb(255,255,255);
+}
+/* footer content */
+#footer .stores{
+	float: left;
+	width: 640px;
+}
+#footer .column{
+	float: left;
+	width: 300px;
+	margin: 0 20px 0 0!important;
+}
+#footer .store{
+	width: 100%;
+	float: left;
+	color: rgb(255,255,255);
+	font-size: 13px;
+	line-height: 16px;
+	border-top: 1px solid rgb(255,255,255);
+}
+#footer .store:last-child{
+	border-bottom: 1px solid rgb(255,255,255);
+}
+#footer .store h4{
+	margin: 5px 0 0 0;
+	font-size: 16px;
+	line-height: 15px;
+}
+#footer .store p{
+	margin: 7px 0;
+}
+#footer .store-content{
+	width: 94%;
+	margin: 1px 0;
+	padding: 5px 3%;
+	transition: all .7s ease;   
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+}
+#footer a.store .store-content:hover{
+	background: rgb(35,35,35);
+}
+#footer a.store.no-link .store-content:hover{
+	background: transparent;
+	cursor: default;
+}
+.site-content{
+	font-size: 14px;
+	line-height: 20px;
+}
+#footer a.newsletter{
+	margin: 5px 20px 5px 0;
+	background: rgb(50,50,50);
+}
+/*------------------------*/
+/* browser warning */
+.browser-warning{
+	width: 400px;
+	padding: 20px;
+}
+.dialog .browser-warning h1{
+	margin: 0 0 10px 0;
+	height: auto;
+	padding: 0;
+}
+.dialog .browser-warning a{
+	text-decoration: underline;
+	color: rgb(230,0,5);
+}

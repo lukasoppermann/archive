@@ -1,0 +1,154 @@
+/*-----------*/
+/* Color
+
+Orange
+rgb(245,160,10)
+
+Blue
+rgb(80,160,180)
+
+*/
+/*------------------*/
+/* Fonts */
+.open_sans{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	line-height: 140%;
+}
+.open_sans_bold, .open_sans strong{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-weight: bold;
+	line-height: 140%;	
+}
+.wf-active .open_sans{
+	font-family: "Open Sans", Arial, Sans-serif;
+	font-weight: 300;
+}
+.wf-active .open_sans_bold, .wf-active .open_sans strong{
+	font-family: "Open Sans", Arial, Sans-serif;
+	font-weight: 400;	
+}
+/*------------------*/
+/* general */
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	position: relative;
+	color: rgb(75,75,75);
+	background: rgb(253,253,253);
+	overflow-y: scroll;
+	transition: background .4s ease;   
+	-webkit-transition: background .4s ease;
+	-moz-transition: background .4s ease;
+	-o-transition: background .4s ease;
+	-ms-transition: background .4s ease;
+}
+img{ float: left; }
+.right{ float: right; }
+.left{ float: left; }
+/*------------------*/
+/* lists */
+.list{ clear: both; }
+/*------------------*/
+/* sprite */
+.veare-sprite, .icon, .icon-small{ background-image: url('../../layout/veare-icons.png'); }
+@media
+only screen and (-Webkit-min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	.veare-sprite, .icon, .icon-small{ 	
+		background-image: url('../../layout/veare-icons@2x.png');
+		background-size: 510px 300px;
+	}
+}
+/*------------------*/
+/* Logo */
+#logo{
+	position: relative;
+	display: block;	
+	float: left;
+	width: 100%;
+	padding: 0 15px 15px;
+	height: 150px;
+	margin: 20px 0 20px 0px;	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.mobile #logo, .nav-narrow #logo{
+	width: 75px;
+	height: 50px;	
+	padding: 0 10px;
+	margin: 2px 0 0 7px;	
+}
+.mobile.landscape #logo, .nav-narrow #logo{ margin-bottom: 15px; }
+#logo .logo-inner{
+	overflow: hidden;
+	display: block;	
+	position: absolute;
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+	background-position: -60px -238px;
+}
+.nav-wide #logo .logo-inner{
+	width: 150px;
+	height: 120px;
+	background-position: 0px -117px;	
+}
+.nav-narrow #logo .logo-inner .logo-img{
+	position: absolute;
+	top: -241px;
+	left: 0;
+}
+#logo .logo-img{
+	margin-top: 3px;	
+	-webkit-transition: margin .318s;
+	-moz-transition: margin .318s;
+	-o-transition: margin .318s;
+	transition: margin .318s;
+	position: relative;
+	float: left;
+}
+.hovers.screen #logo:hover .logo-img, .hovers.wide-screen #logo:hover .logo-img{
+	margin-top: 0px;
+	-webkit-transition: margin .118s;
+	-moz-transition: margin .118s;
+	-o-transition: margin .118s;
+	transition: margin .118s;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx)
+{
+	.logo-img img{ display: none; }
+	.nav-wide #logo .logo-inner .logo-img, .nav-narrow #logo .logo-inner .logo-img{ 
+		background-image: url('../../layout/veare-icons@2x.png'); 
+		background-size: 510px 300px;
+	}
+	.nav-wide #logo .logo-inner .logo-img{
+		height: 150px;
+		width: 180px;
+		left: 0;
+		top: -1px;
+		display: block;
+	}
+	.nav-narrow #logo .logo-inner .logo-img{
+		position: absolute;
+		left: 0;
+		top: -1px;
+		display: block;
+		width: 70px;
+		height: 55px;	
+		background-position: 0px -240px;
+	}
+}

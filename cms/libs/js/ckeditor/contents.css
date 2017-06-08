@@ -1,0 +1,107 @@
+/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+*{ font-family: "Helvetica", "Arial", Sans-serif; }
+
+body, html{
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+	font-family: "Helvetica", "Arial", Sans-serif;
+	color: rgb(50,50,50);
+	display: block;
+	float: left;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	height: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+/* preserved spaces for rtl list item bullets. (#6249)*/
+ol,ul,dl
+{
+    padding-right:40px;
+}
+
+html
+{
+	/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+	To prevent this misbehavior, we show the scrollbar always */
+	_overflow-y: scroll;
+	/* #6341: The text cursor must be set on the editor area. */
+	cursor: text;
+	/* #6632: Avoid having "text" shape of cursor in IE7 scrollbars.*/
+	*cursor:auto;
+}
+
+img:-moz-broken
+{
+	-moz-force-broken-image-icon : 1;
+	width : 24px;
+	height : 24px;
+}
+img, input, textarea
+{
+	cursor: default;
+}
+
+img, a img{ border: 0; }
+
+.clear-both{ clear: both; }
+.clear-left{ clear: left; }
+.clear-right{ clear: right !important; }
+.float-left{ float: left !important; }
+.float-right{ float: right !important; }
+
+a{ color: rgb(50,50,50); }
+a.link{ color: rgb(15,165,60)!important; display: inline-block; }
+a.link:before{
+	content: "";
+	height: 16px;
+	width: 14px;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	background-image: url('../../media/layout/hygromatik_sprite.png');
+	background-repeat: no-repeat;
+	background-position: -32px 0px;
+	text-indent: -99999px;
+	float: left;
+	padding-left: 2px;
+}
+a:hover{ color: rgb(15,165,60); text-decoration: none;}
+h2, h3{
+	margin: 0 0 5px 0;
+	font-weight: bold;
+	color: rgb(15,165,60);
+	width: 90%;
+}
+h2{ font-size: 18px; }
+h3{ font-size: 14px; }
+.image{
+	float: right;
+	clear: right;	
+	padding: 10px;
+}
+.image img{
+
+	position: relative;
+	display: block;
+}
+.image span.caption{
+	clear: both;
+	padding: 5px 5px 0px 5px;
+	display: block;
+	font-size: 10px;
+	color: rgb(150,150,150);
+	float: left;
+}
+
+ol li, ul li{
+	padding: 5px 0px;
+}

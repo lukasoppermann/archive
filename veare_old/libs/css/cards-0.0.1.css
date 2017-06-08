@@ -1,0 +1,151 @@
+/*---------------------------------*/
+/* Card Layout */
+.card-wrap{
+	position: relative;	
+	display: inline-block;
+	text-align: left;
+	height: 100%;
+	width: 100%;
+	max-width: 300px;
+}
+.card{
+	height: 100%;
+	width: 100%;
+	max-width: 300px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;	
+	font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+	border-radius: 1px;
+	background: rgb(255,255,255);
+	box-shadow: 0px 2px 0px 0px rgba(0,0,0,.05), 0px 0px 0px 1px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,.05), 0px 0px 0px 1px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,.05), 0px 0px 0px 1px rgba(0,0,0,.1);
+}
+.hovers .card-flip:hover .card{
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+	box-shadow: 0 15px 50px rgba(0,0,0,0.3);	
+}
+.card-flip{ z-index: 10; }
+.hovers .card-flip:hover{
+	z-index: 90;
+} 
+/*---------------------------------*/
+/* Flip animation */
+.card-flip, .card{
+	/* preserve 3D */
+	-moz-transform-style: preserve-3d;
+	-webkit-moz-transform-style: preserve-3d;
+	-o-moz-transform-style: preserve-3d;
+	-ms-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.card-flip {
+	text-decoration: none;
+	text-align: center;
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 30;
+}
+.card{
+	/* transition */
+	-webkit-transition: -webkit-transform .5s ease;
+	-moz-transition: -moz-transform .5s ease;
+	-ms-transition: -ms-transform .5s ease;
+	-o-transition: -o-transform .5s ease;
+	transition: transform .5s ease;
+	/* backface hidden */
+	-webkit-backface-visibility: hidden;	
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+/*	opacity: 0.99;*/
+}
+.card-flip .front{
+	-webkit-transform: perspective(600px) rotateY( 0deg );
+	-moz-transform: perspective(600px) rotateY( 0deg );
+	-ms-transform: perspective(600px) rotateY( 0deg );
+	-o-transform: perspective(600px) rotateY( 0deg );
+	transform: perspective(600px) rotateY( 0deg );	
+	z-index: 900;
+}
+.hovers .card-flip:hover .back{
+		-webkit-transform: rotateY( 0deg );
+		transform: rotateY( 0deg );	
+}
+.card-flip .back {
+	-webkit-transform: perspective(600px) rotateY( -180deg );
+	-moz-transform: perspective(600px) rotateY( -180deg );
+	-ms-transform: perspective(600px) rotateY( -180deg );
+	-o-transform: perspective(600px) rotateY( -180deg );
+	transform: perspective(600px) rotateY( -180deg );
+	z-index: 800;
+}
+.hovers .card-flip:hover .front {
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+	z-index: 900;
+}
+/*---------------------------------*/
+/* card content - front */
+.card-flip .back{
+	background: rgb(245,160,10);
+	color: rgb(255,255,255);
+}
+.card-content{
+	width: 100%;
+	height: 100%;
+	height: -moz-calc(100% - 10px);	
+	height: -webkit-calc(100% - 12px);
+	overflow: hidden;
+}
+.card-content .card-text{
+	font-size: 115%;
+	font-style: italic;
+}
+.card-content .card-image{
+	font-size: 30px;
+	line-height: 36px;
+	text-align: right;
+	color: rgb(255,255,255);
+}
+.card-headline{
+	font-size: 140%;
+	letter-spacing: .02em;
+}
+/* card content - back */
+.card-back-content{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+.card-arrow{
+	position: absolute;
+	background: url(../../layout/veare-icons.png);
+	background-position: -150px -180px;
+	height: 30px;
+	width: 30px;
+}
+.card-back-content .card-headline{ color: rgb(255,255,255); }
+.card-back-title{
+	height: 230px;
+	width: 100%;
+	padding: 15px;
+	font-size: 48px;
+	line-height: 48px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*---------------------------------*/
+/* tablet versions */
+.tablet .card-content .card-headline, .tablet-small .card-content .card-headline{ font-size: 130%; }
+.tablet-small .card-content .card-text{ font-size: 105%; }

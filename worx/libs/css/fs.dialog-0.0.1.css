@@ -1,0 +1,121 @@
+.dialog-wrapper{
+	display: none;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.dialog-inner-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;	
+}
+.dialog-overlay{
+	position: fixed;
+	background: rgb(245,245,245);
+	height: 100%;
+	width: 100%;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	display: none;
+	opacity: 0.85;
+}
+.dialog, #dialog_temp{
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -125px;
+	min-width: 250px;
+	min-height: 100px;
+	background: rgb(250,250,250);
+	border-radius: 3px;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
+	z-index: 3;	
+}
+#dialog_temp{
+	overflow: visible;
+}
+#dialog_temp h1{
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	height: 36px;
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+	background-image: -webkit-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+	border-bottom: 1px solid rgb(235,235,235);
+	z-index: 9;
+	color: rgb(150,150,150);
+	text-shadow: rgb(255,255,255) 0px 1px 0px;
+}
+.close{
+	display: block;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	overflow: hidden;
+	padding: 3px 5px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 14px;
+	z-index: 10;
+	top: 8px;
+	right: 5px;
+	border-radius: 20px;
+	color: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.close:hover{
+	background: rgba(0,0,0,0.1);
+	box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15);
+	color: rgb(255,255,255);
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 0px, rgba(0,0,0,0.25) 0px 0px 1px;
+}
+.dialog h1{
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	height: 36px;
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+	background-image: -webkit-linear-gradient(top, rgb(250,250,250), rgb(240,240,240));
+	border-bottom: 1px solid rgb(235,235,235);
+	z-index: 9;
+	color: rgb(150,150,150);
+	text-shadow: rgb(255,255,255) 0px 1px 0px;
+}
+.dialog.loading:before{
+	content: "";
+	display: block;
+	height: 64px;
+	width: 64px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -32px 0 0 -32px;
+	background-image: url(../../layout/loader.gif);
+	background-repeat: no-repeat;
+}

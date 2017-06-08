@@ -1,0 +1,59 @@
+/*------------------------*/
+/* menu-box */
+.left-column{
+	float: left;
+	width: 320px;
+	margin: 0 20px 0 0;
+}
+.back{
+	position: relative;
+	float: left;
+	display: block;
+	font-size: 14px;
+	width: 270px;
+	margin: 20px 0 0 0;
+	color: rgb(100,100,100);
+	color: rgb(250,250,250);
+	padding: 10px 25px;
+	background: rgb(0,0,0);
+}
+.back:hover{
+	background: rgb(255,0,5);
+}
+.back:hover:after{
+	border-color: transparent rgb(255,0,5) transparent transparent;	
+} 
+.back:before, .back:after{
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	position: absolute;
+	left: -3px;
+	top: 9px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: transparent rgb(255,255,255) transparent transparent;
+}
+.back:after{
+	left: 1px;	
+	border-color: transparent rgb(0,0,0) transparent transparent;
+}
+.quote-box{
+	float: left;
+	display: block;
+	width: 320px;
+	margin: 20px 0 0 0;
+	background: rgb(0,0,0);
+	color: rgb(250,250,250);
+}
+.quote-box h3{
+	font-size: 18px;
+	padding: 15px 25px 5px;
+}
+.quote-box .quote{
+	padding: 0 25px 20px;
+	font-size: 13px;
+	line-height: 18px;
+	color: rgb(240,240,240);	
+}

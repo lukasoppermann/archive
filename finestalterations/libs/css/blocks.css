@@ -1,0 +1,48 @@
+#content{
+	width: 100%;
+	float: left;
+}
+.column{
+	float: left;
+	width: 31.5%;
+	margin: 0 2.75% 0 0;	
+}
+.column-last{
+	float: left;
+	margin: 0;	
+}
+.block{
+	float: left;
+	width: 100%;
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+	margin: 25px 0 0 0;
+}
+.ie .block.has-image{
+	box-sizing: border-box;
+}
+.ie.ie10 .block.has-image, .ie.iegt10 .block.has-image{
+	border: none;
+}
+.block .link{
+	width: 100%;
+}
+.block h3{
+	font-size: 24px;
+	padding: 15px 20px 0 20px;
+}
+.block .content{
+	font-size: 14px;
+	padding: 0px 20px 20px 20px;
+}
+.block .image{
+	width: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;	
+}
+.block .image img{ float: left; }
+.block.has-image .text-content{
+	float: left;
+	width: 100%;
+}

@@ -1,0 +1,11 @@
+/* TEAM */
+Title:      Lukas Oppermann
+Position:   Inteface Designer, Programmer
+Site:       http://www.veare.net
+Twitter:    @lukasoppermann
+Location:   Berlin, Germany
+/* SITE */
+Updated:     2011/06/28
+Language:    German (DE)
+Standards:   HTML5, CSS3, JavaScript
+Components:  jQuery, CodeIgniter

@@ -1,0 +1,105 @@
+.dialog-wrapper{
+	display: none;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.dialog-inner-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;	
+}
+.dialog-overlay{
+	position: fixed;
+	background: rgb(60,60,60);
+	height: 100%;
+	width: 100%;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	display: none;
+	opacity: 0.85;
+}
+.dialog, #dialog_temp{
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -125px;
+	min-width: 250px;
+	min-height: 100px;
+	background: rgb(0,0,0);
+	z-index: 3;	
+}
+#dialog_temp{
+	overflow: visible;
+}
+#dialog_temp h1{
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	height: 36px;
+	z-index: 9;
+	color: rgb(255,255,255);
+}
+.close{
+	display: block;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	overflow: hidden;
+	padding: 3px 5px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 10px;
+	z-index: 10;
+	top: 8px;
+	right: 5px;
+	border-radius: 20px;
+	color: rgb(255,255,255);
+	cursor: pointer;
+}
+.close:hover{
+	color: rgb(255,255,255);
+}
+.dialog h1{
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	height: 36px;
+	line-height: 14px;
+	z-index: 9;
+	color: rgb(255,255,255);
+}
+.dialog.loading:before{
+	content: "";
+	display: block;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+	background-image: url(../../media/layout/loader.gif);
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,313 @@
+/*------------------------*/
+/* Forms */
+.form-wrapper{
+	vertical-align: middle;
+	padding: 2px 2px 2px 0px;
+	margin: 2px 0px 5px 0px;
+	float: left;
+	clear: both;
+	color: rgb(150,150,150);
+	border: 1px dashed rgb(215,215,215);
+	border-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	width: 100%;	
+}
+.form-wrapper.active{
+	vertical-align: middle;	
+	color: rgb(90,90,90);
+	padding: 2px 2px 2px 0px;
+	margin: 2px 0px 5px 0px;
+	background: rgb(230,230,230);
+	border: 1px solid rgb(255,255,255);
+	border-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	box-shadow: inset 0px 0px 3px rgb(90,90,90);
+	-webkit-box-shadow: inset 0px 0px 3px rgb(90,90,90);
+	-moz-box-shadow: inset 0px 0px 3px rgb(90,90,90);	
+}
+.form-wrapper span.outer{
+	float: left;
+	display: block;	
+	margin-left: 2px;	
+	margin-right: 10px;	
+	padding: 0px 0px 0px 2px;
+	height: 24px;	
+	background: url('../../media/layout/formandsystem_btn_single_passive.png') top left no-repeat;	
+}
+.form-wrapper span.outer span{
+	margin: 0px;
+	display: block;
+	float: left;
+	height: 24px;
+	padding: 0px 4px 0px 0px;
+	background: url('../../media/layout/formandsystem_btn_single_passive.png') top right no-repeat;
+}
+.form-wrapper span.outer:hover, .form-wrapper span.outer:hover span{
+	background-image: url('../../media/layout/formandsystem_btn_single_active.png')	
+}
+.form-wrapper span span label{
+	color: rgb(90,90,90);
+	font-size: 11px;
+	font-family: "Helvetica", "Arial", Sans-serif;	
+	text-decoration: none;	
+	text-shadow: rgb(235,235,235) 1px 1px 0px;	
+	padding: 7px 10px 6px 10px;	
+	border: 0px;
+	background: none;
+	display: block;
+	float: left;
+}
+.form-wrapper span:hover span label{
+	color: rgb(90,90,90);	
+	text-shadow: rgb(215,215,215) 1px 1px 0px;	
+}
+.form-wrapper.active span span label, .form-wrapper.active span:hover span label{
+	color: rgb(150,150,150);
+	font-size: 11px;
+	font-family: "Helvetica", "Arial", Sans-serif;	
+	text-decoration: none;	
+	text-shadow: rgb(255,255,255) 1px 1px 0px;	
+	padding: 7px 10px 6px 10px;	
+	border: 0px;
+	background: none;
+	display: block;
+	float: left;
+}
+/*------------------------*/
+/* Input Box */
+.input-box input{
+	border: 0px;
+	float: left;
+	background: none;
+	height: 11px;
+	padding: 7px 5px 6px 5px;
+	color: rgb(150,150,150);
+}
+.input-box.active input{
+	color: rgb(90,90,90);
+}
+.input-box input:focus{
+	outline: none;
+}
+/*------------------------*/
+/* Select Box */
+/*.select-box input{*/
+
+/*------------------------*/
+/* Forms */
+
+/* fieldset */
+
+/*------------------------*/
+/* Settings Form */
+#settings_form{
+	float: left;
+	width: 625px;
+}
+#settings_form fieldset{
+	float: left;
+	display: block;
+	width: 600px;
+	margin-bottom: 50px;
+	border: 1px solid rgb(200,200,200);
+	border-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	clear: both;
+}
+#settings_form fieldset legend{
+	color: rgb(90,90,90);
+}
+#settings_form fieldset fieldset{
+	float: left;	
+	display: block;	
+	border: 1px solid rgb(215,215,215);	
+	margin-bottom: 20px;
+	width: 565px;	
+}
+#settings_form fieldset fieldset legend{
+	color: rgb(150,150,150);
+}
+#settings_form .input-box{
+	height: 24px;
+}
+#settings_lang_menu{
+	display: block;
+	height: 15px;
+	margin-bottom: 20px;
+	float: right;
+	list-style: none;
+}
+#settings_lang_menu li{
+	float: left;
+	color: rgb(90,90,90);	
+}
+#settings_lang_menu li a{
+	text-decoration: underline;
+	padding: 5px;	
+	color: rgb(150,150,150);
+}
+#settings_lang_menu li span{
+	padding: 5px;	
+	background: rgb(215,215,215);		
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+/*------------------------*/
+/* CMS Pages */
+#add_page_form{
+	float: left;
+	display: block;
+	width: 920px;
+	padding: 0px;
+	margin: 0px;
+}
+#add_page_form fieldset{
+	padding: 10px;
+}
+#add_page_form #left_column{
+	float: left;
+}
+#add_page_form #right_column{
+	float: left;
+}
+#add_page_form #fieldset_general{
+	width: 650px;
+}
+#add_page_form .page_title{
+	font-size: 16px;	
+	border: 0px;
+	float: left;
+	background: none;
+	height: 14px;
+	padding: 7px 5px 6px 5px;
+	color: rgb(150,150,150);
+}
+#add_page_form #fieldset_column_1{
+	width: 300px;	
+	float: left;
+	margin-right: 10px;
+}
+#add_page_form #fieldset_column_2{
+	width: 300px;	
+	float: left;
+}
+#add_page_form .page_excerpt{
+	width: 310px;	
+	float: left;
+	height: 150px;
+	font-size: 11px;
+	border: none;
+	background: none;	
+}
+#add_page_form .page_content{
+	font-size: 11px;
+	border: none;
+	background: none;
+}
+
+/*------------------------*/
+/* Layout */
+#logo a{
+	width: 150px;
+	height: 45px;
+	display: block;
+	float: left;
+}
+#logo a:hover{
+	width: 150px;
+	height: 45px;
+	display: block;
+	float: left;
+	background: url('../../media/layout/formandsystem_logo_active.png');
+}
+#logo a:hover img{
+	position: absolute;
+	left: -999;
+}
+
+/* Navigation Tree */
+#sub_nav{
+	margin: 0px 0px 25px 0px;
+	padding: 0px;
+	float: left;
+	height: 100%;
+	width: 224px;
+	list-style: none;
+	border-bottom: 1px solid rgb(240,240,240);		
+}
+#sub_nav li a{
+	display: block;
+	padding: 12px 5px 12px 19px;
+	border-top: 1px solid rgb(240,240,240);	
+	border-bottom: 1px solid rgb(200,200,200);
+	text-decoration: none;	
+	color: rgb(90,90,90);	
+	text-shadow: rgb(245,245,245) 1px 1px 0px;	
+}
+#sub_nav li a:hover{
+	display: block;
+	padding: 12px 5px 12px 19px;
+	border-top: 1px solid rgb(240,240,240);	
+	border-bottom: 1px solid rgb(160,160,160);
+	text-decoration: none;	
+	color: rgb(90,90,90);	
+	text-shadow: rgb(245,245,245) 1px 1px 0px;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(225,225,225)), to(rgb(200,200,200))); /* for webkit browsers */
+	background: -moz-linear-gradient(top, rgb(225,225,225), rgb(200,200,200)); /* for firefox 3.6+ */
+}
+#sub_nav li.active a{
+	display: block;
+	padding: 12px 5px 12px 19px;
+	border-top: 1px solid rgb(235,235,235);	
+	border-bottom: 1px solid rgb(120,120,120);
+	text-decoration: none;	
+	color: rgb(240,240,240);	
+	text-shadow: rgb(130,130,130) 1px 1px 0px;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(180,180,180)), to(rgb(140,140,140))); /* for webkit browsers */
+	background: -moz-linear-gradient(top, rgb(180,180,180), rgb(140,140,140)); /* for firefox 3.6+ */
+}
+/*------------------------*/
+/* Navigation Tree */
+#nav_tree{
+	
+}
+#nav_tree li{
+	padding: 5px;
+}
+#nav_tree a{
+	padding: 5px;
+}
+/*------------------------*/
+/* Head */
+#content_head h1{
+	display: inline;
+	font: inherit 18px;	
+}
+/*------------------------*/
+
+#add_new_item{
+	float: right;
+}
+
+
+/* Navigation Form */
+#navigation_add{
+	width: 70%;
+}
+#navigation_add label{
+	display: block; 
+	width: 100px;
+	height: 20px;
+	float: left;
+}
+#language_select input, #status_select input{
+	float: left;
+}
+#language_select .input_box, #status_select .input_box{
+	float: left;
+	height: 20px;	
+}

@@ -1,0 +1,263 @@
+.group{
+	position: relative;
+	float: left;
+	margin: 15px;
+	border: 2px dashed rgb(200,200,200);
+	border-radius: 5px;
+	width: 460px;
+}
+.group-header{
+	top: -10px;
+	font-size: 12px;
+	left: 12px;
+	padding: 1px 8px;
+	background: rgb(245,245,245);
+	color: rgb(180,180,180);
+	position: absolute;
+}
+.group-options{
+	top: -10px;
+	font-size: 12px;
+	right: 12px;
+	padding: 1px 3px;
+	background: rgb(245,245,245);
+	color: rgb(180,180,180);
+	position: absolute;
+}
+.group-options a{
+	color: inherit;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0px 5px;
+}
+.group-options a:hover{
+	text-decoration: underline;
+	color: rgb(20,130,210);
+}
+.entry-list{
+	float: left;
+	margin: 10px;
+	list-style: none;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	border-radius: 4px;
+}
+.entry-list .item{
+	float: left;
+	width: 100%;
+	padding: 0px;
+	height: 32px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	background: rgb(255,255,255);
+	border-bottom: 1px solid rgb(240,240,240);
+	overflow: hidden;
+}
+.entry-list.hidden{
+	display: none;
+}
+.entry-list .item.open .customer-name{
+	text-decoration: underline;
+}
+.entry-list .item.open{
+	height: auto;
+}
+.entry-list .item .info{
+	height: 0;
+}
+.entry-list .item.open .info{
+	float: left;
+	background: rgb(250,250,250);
+	box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.25);
+}
+.entry-list .item .columns{
+	float: left;
+	overflow: hidden;
+}
+.entry-list .item.open .columns{
+	overflow: visible;
+}
+.entry-list .item.open .column{
+	float: left;
+	width: 50%;
+	padding: 10px 2% 10px 0px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.entry-list .item .column:last-child{
+	padding: 0 0 0 2%;
+}
+.entry-list .item.open:last-child .status{
+	border-bottom-left-radius: 0px;
+	-webkit-border-radius-bottom-left: 0px;
+}
+.entry-list .item.open:last-child .info{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-radius-bottom-left: 5px;
+	-webkit-border-radius-bottom-right: 5px;
+}
+.entry-list .sortable-placeholder{
+	height: 32px;
+}
+.entry-list li:first-child{
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+.entry-list li:last-child{
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom: 0;
+}
+.entry-list .item .title{
+	width: 160px;
+	padding: 10px 0 10px 4px;
+	height: 32px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	overflow: hidden;
+}
+.entry-list .item .title-extra{
+	display: inline-block;
+	color: rgb(150,150,150);
+	padding-left: 5px;
+}
+.entry-list .item .ticket-nr{
+	display: inline-block;
+	float: left;
+	padding: 10px 0 10px 4px;
+	height: 32px;
+	padding-left: 5px;	
+	color: rgb(150,150,150);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.entry-list .item .time{
+	float: left;
+	padding: 10px 0 10px 10px;
+	height: 32px;
+	overflow: hidden;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: rgb(200,200,200);
+}
+.entry-list .item.open .time{
+	color: rgb(100,100,100);
+}
+.entry-list .item .time .time-span, .entry-list .item.open .time .pickup-time{
+	display: inline;
+	text-decoration: underline;
+	height: 16px;
+	overflow: hidden;
+}
+.entry-list .item .edit, .entry-list .item .delete{
+	display: block;
+	float: right;
+	height: 32px;
+	width: 30px;
+	opacity: 0.0;
+}
+.entry-list .item:hover .edit, .entry-list .item:hover .delete{
+	opacity: 0.5;
+}
+.entry-list .item .edit:hover, .entry-list .item .delete:hover{
+	opacity: 1;
+}
+.entry-list .item .edit a, .entry-list .item .delete a{
+	width: 30px;
+	height: 32px;
+}
+.entry-list .item .edit a:before, .entry-list .item .delete a:before{
+	content: "";
+	display: block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 6px;
+	left: 2px;
+	background-image: url(../../layout/worx_sprite.png);
+	background-position: -20px -40px;
+}
+.entry-list .item .delete, .entry-list .item .delete a{
+	width: 25px;
+	right: 3px;
+}
+.entry-list .item .delete a:before{
+	background-position: 0 -40px;
+}
+.entry-list .item .status{
+	height: 32px;
+	width: 6px;
+	float: left;
+	background: rgb(200,200,200);
+}
+.entry-list .item .status-1{
+	background: rgb(150,200,50);
+}
+.entry-list .item .status-2{
+	background: rgb(240,140,20);
+}
+.entry-list .item .status-3{
+	background: rgb(200,50,50);
+}
+.entry-list .item .status-4{
+	background: rgb(250,225,20);
+}
+.entry-list .item .status-5{
+	background: rgb(90,170,230);
+}
+.entry-list .item .status-6{
+	background: rgb(180,180,180);
+}
+.entry-list .item:first-child .status{
+	border-top-left-radius: 3px;
+}
+.entry-list .item:last-child .status{
+	border-bottom-left-radius: 3px;
+}
+.entry-list .button{
+	float: right;
+}
+.entry-list .item .form-element input, .entry-list .item .form-element textarea, .entry-list .item .form-element .textarea, .entry-list .item .form-element .fixed-content{
+	background: rgb(250,250,250);
+	color: rgb(100,100,100);
+	padding: 3px 5px;
+	line-height: 100%;
+	margin-bottom: 5px;
+	height: auto;
+}
+.entry-list .item .form-element:hover input, .entry-list .item .form-element:hover textarea, .entry-list .item .form-element:hover .textarea,
+.entry-list .item .form-element input:focus, .entry-list .item .form-element textarea:focus, .entry-list .item .form-element:hover .textarea:focus{
+	background: rgb(255,255,255);
+}
+.entry-list .item .form-element div{
+	padding: 7px;
+}
+.entry-list .item .form-element [name="address"]{
+	height: 37px;
+}
+.entry-list .item label{
+	padding-left: 7px;
+}
+.entry-list .item .form-element .fixed-content{
+	padding-left: 8px;
+}
+.entry-list .item .form-element .notes{
+	line-height: 140%;
+}
+.entry-list .item .form-element .notify{
+	float: right;
+}
+.ticket-column{
+	float: left;
+	width: 490px;
+}

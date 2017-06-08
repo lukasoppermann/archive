@@ -1,0 +1,97 @@
+#user_list{
+	margin: 10px 5px 20px 20px;
+}
+.user-card{
+	float: left;
+	position: relative;
+	width: 300px;
+	margin: 5px 2.5% 5px 0;
+}
+.user-card .widget-content{
+	float: left;
+	width: 100%;
+}
+.user-card .user-image{
+	height: 90px;
+	width: 90px;
+	margin: 5px 10px 5px 5px;
+	float: left;
+	border-radius: 3px;
+	background: rgb(90,170,230);
+	background-image: -moz-linear-gradient(top, rgb(90,170,230), rgb(20,130,210));
+	background-image: -webkit-linear-gradient(top, rgb(90,170,230), rgb(20,130,210));
+}
+.user-card .image-overlay{
+	border-radius: 3px;
+	height: 90px;
+	width: 90px;
+	box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.35);	
+}
+.user-card-content{
+	margin: 10px 10px 10px 0;
+	float: left;
+	width: 185px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.user-card-content h4, .user-card-content span{
+	display: block;
+	width: 185px;
+	overflow: hidden;	
+}
+.user-card-content h4{
+	margin: 0 0 10px 0;
+}
+.form-element input.error{
+	border: 2px solid rgb(255,100,100);
+	padding: 6px;
+}
+.form-element input.success{
+	border: 2px solid rgb(120,190,0);
+	padding: 6px;
+}
+.add-user-card{
+	margin: 18px 15px 15px 0;
+	float: left;
+	display: block;
+	height: 90px;
+	width: 90px;
+	border-radius: 5px;
+	border: 3px dashed rgb(200,200,200);
+	cursor: pointer;
+	font-size: 100px;
+	line-height: 80px;
+	font-weight: bold;
+	color: rgb(210,210,210);
+	text-shadow: rgb(255,255,255) 0px 1px 0px;
+	padding: 0px 0 0 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	transition: all .4s;   
+	-webkit-transition: all .4s;  
+	-moz-transition: all .4s;
+}
+.add-user-card:hover{
+	border-color: rgb(90,170,230);
+	color: rgb(90,170,230);
+}
+.form{
+	width: 400px;
+	float: left;
+}
+.button.delete{
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	text-decoration: underline;
+	color: rgb(200,50,50);
+}
+.button.delete:hover{
+	color: rgb(250,25,25);	
+}

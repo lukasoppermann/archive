@@ -1,0 +1,55 @@
+#main_content #settings{
+	width: 1100px;
+}
+#main_content #settings fieldset{
+	width: 300px;
+	display: block;
+	position: relative;
+	float: left;
+	margin-right: 30px;
+}
+#main_content #settings h3{
+	float: left;
+	display: block;
+	padding: 9px 9px 9px 9px;
+	height: 35px;
+	box-shadow: inset 0 0 1px 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#main_content #settings fieldset div{
+	width: 280px;
+	position: relative;
+	display: block;
+	float: left;
+ 	margin: 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#main_content #settings fieldset div input{
+	position: relative;
+	display: block;
+	float: left;
+}
+#submit-button{
+	float: left;
+	display: block;
+	width: 310px;
+	margin: 20px 0 0 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#disclaimer{
+	height: 290px;
+}

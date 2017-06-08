@@ -1,0 +1,16 @@
+.full-width:before{
+	display: block;
+	content: "";
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background: rgb(250,250,250);
+	background-image: -moz-linear-gradient(left, rgb(255,255,255), rgb(245,245,245) 10%, rgb(245,245,245) 90%, rgb(255,255,255));
+	background-image: -webkit-linear-gradient(left, rgb(255,255,255), rgb(245,245,245) 10%, rgb(245,245,245) 90%, rgb(255,255,255));
+	background-image: -o-linear-gradient(left, rgb(255,255,255), rgb(245,245,245) 10%, rgb(245,245,245) 90%, rgb(255,255,255));
+	background-image: -ms-linear-gradient(left, rgb(255,255,255), rgb(245,245,245) 10%, rgb(245,245,245) 90%, rgb(255,255,255));
+	background-image: linear-gradient(left, rgb(255,255,255), rgb(245,245,245) 10%, rgb(245,245,245) 90%, rgb(255,255,255));
+}

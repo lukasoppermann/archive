@@ -1,0 +1,36 @@
+[submodule "system/packages/fs_authentication"]
+	path = system/packages/fs_authentication
+	url = https://github.com/lukasoppermann/fs_authentication.git
+[submodule "system/packages/fs_navigation"]
+	path = system/packages/fs_navigation
+	url = https://github.com/lukasoppermann/fs_navigation.git
+[submodule "system/packages/fs_utilities"]
+	path = system/packages/fs_utilities
+	url = https://github.com/lukasoppermann/fs_utilities.git
+[submodule "system/packages/fs_url"]
+	path = system/packages/fs_url
+	url = https://github.com/lukasoppermann/fs_url.git
+[submodule "system/packages/fs_optimize"]
+	path = system/packages/fs_optimize
+	url = https://github.com/lukasoppermann/fs_optimize.git
+[submodule "system/packages/fs_debug"]
+	path = system/packages/fs_debug
+	url = https://github.com/lukasoppermann/fs_debug.git
+[submodule "system/packages/fs_log"]
+	path = system/packages/fs_log
+	url = https://github.com/lukasoppermann/fs_log.git
+[submodule "system/packages/fs_google"]
+	path = system/packages/fs_google
+	url = https://github.com/lukasoppermann/fs_google.git
+[submodule "system/packages/fs_curl"]
+	path = system/packages/fs_curl
+	url = https://github.com/lukasoppermann/fs_curl.git
+[submodule "system/packages/fs_jsmin"]
+	path = system/packages/fs_jsmin
+	url = https://github.com/lukasoppermann/fs_jsmin.git
+[submodule "system/packages/fs_oauth"]
+	path = system/packages/fs_oauth
+	url = https://github.com/lukasoppermann/fs_oauth.git
+[submodule "system/packages/fs_base_model"]
+	path = system/packages/fs_base_model
+	url = https://github.com/lukasoppermann/fs_base_model.git

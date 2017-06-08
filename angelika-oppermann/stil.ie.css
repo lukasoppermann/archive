@@ -1,0 +1,73 @@
+#top{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="image", src='		images/top.png');
+}
+#body{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src='		images/bg2.png');
+}
+#bottom{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="image", src='		images/bottom.png');
+}
+input{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src='		images/bg_transparent.png');
+}
+textarea{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src='		images/bg_transparent.png');
+}
+#impressum{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src='		images/bg_transparent.png');
+	margin-left: -10px;
+}
+#lebenslauf{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src='		images/bg_transparent.png');
+	margin-left: -20px;
+}
+#middle{
+	padding: 40px 40px 0px 60px;
+}
+#topline{
+    float: left;
+    height: 3px;
+    font-size: 1px;
+    line-height: 1px;
+    width: 100%;
+    background: #FFBA00;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+#content{
+    width: 850px;
+	height: 450px;
+    padding: 0px;
+    background:url(images/angelika.jpg) no-repeat;
+}
+a.right{
+	position:absolute;
+    left: 885px;
+    float: right;
+	padding-top: 220px;
+    height: 230px;
+    width: 35px;
+    display: block;
+	text-decoration: none;
+}
+a.right:hover{
+	float: right;
+	position:absolute;
+    left: 885px;
+    height: 230px;
+    width: 30px;
+    display: block;
+	text-decoration: none;
+    background: #ffffff;
+}
+a.left:hover{
+    width: 30px;
+    background: #ffffff;
+}

@@ -1,0 +1,113 @@
+/*------------------------*/
+/* menu-box */
+.left-column{
+	float: left;
+	width: 320px;
+	margin: 0 20px 0 0;
+}
+.quote-box{
+	float: left;
+	display: block;
+	width: 320px;
+	margin: 20px 0 0 0;
+	background: rgb(0,0,0);
+	color: rgb(250,250,250);
+}
+.quote-box h3{
+	font-size: 24px;
+	font-weight: normal;
+	padding: 15px 25px 5px;
+}
+.quote-box .quote{
+	padding: 0 25px 20px;
+	font-size: 13px;
+	line-height: 18px;
+	color: rgb(240,240,240);	
+}
+/*------------------------*/
+/* content-box */
+.content-box{
+	padding: 15px 15px 15px 25px;
+	float: left;
+	display: block;
+	width: 620px;
+	min-height: 200px;
+	margin-top: 20px;	
+	color: rgb(255,255,255);
+}
+.ie .content-box{
+	width: 618px;	
+}
+.content-box .main-headline{
+	font-size: 36px;
+	width: 100%;	
+	margin-bottom: 15px;
+}
+.content-box h2, .content-box h3{
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.content-box p{
+	margin: 0px 15px 15px 0px;
+}
+.big-banner{
+	position: relative;
+	float: left;
+}
+.content-container .gallery, .big-banner .gallery{
+	width: 660px;
+	height: 230px;
+	margin: -15px 0 25px -25px;	
+	overflow: hidden;
+	position: relative;
+}
+.big-banner .gallery{
+	width: 1000px;
+	height: 380px;
+	margin: 25px 0 0 0;
+	border-bottom: 0px solid transparent;
+}
+.content-container .image-wrap, .big-banner .image-wrap{
+	position: relative;
+	float: left;
+	height: 230px;
+	width: 10000px;	
+}
+.big-banner .image-wrap{
+	height: 380px;
+}
+.content-container .image, .big-banner .image{
+	width: 660px;
+	height: 230px;
+	float: left;
+	position: relative;
+}
+.big-banner .image{
+	width: 1000px;
+	height: 380px;
+}
+.content-container .image:before, .big-banner .image:before{
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);
+	background-image: url(../../media/layout/loader.gif);
+	background-repeat: no-repeat;
+	background-position: 298px 83px;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.content-container .image.loaded:before, .big-banner .image.loaded:before{
+	opacity: 0;
+}
+.content-container img, .big-banner img{
+	float: left;
+}

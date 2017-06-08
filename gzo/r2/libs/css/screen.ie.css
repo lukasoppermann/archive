@@ -1,0 +1,10 @@
+#gallery-menu{
+	width: 940px;
+}
+#sidebar a{
+	color: #4d4d4d;
+}
+#footer{
+	position: absolute;
+	bottom: -30px;
+}

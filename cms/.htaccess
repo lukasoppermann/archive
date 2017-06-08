@@ -1,0 +1,56 @@
+<FilesMatch "\.(inc|inc.php|htaccess|class.php|function.php)$">
+  order allow,deny
+  deny from all
+</FilesMatch>
+
+<ifModule mod_headers.c>
+  Header unset ETag
+</ifModule>
+FileETag None
+
+<ifModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 1 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType text/css "access plus 604800 seconds"
+  ExpiresByType text/javascript "access plus 216000 seconds"
+  ExpiresByType application/x-javascript "access plus 216000 seconds"
+</ifModule>
+
+<ifModule mod_headers.c>
+  <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\\.(xml|txt)$">
+    Header set Cache-Control "max-age=216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+
+# Add Proper MIME-Type for Favicon
+AddType image/x-icon .ico
+
+# Enable Apache's mod_expires Module
+ExpiresActive On
+ExpiresByType image/x-icon "access plus 6 month"
+
+
+AddCharset utf-8 .css .html .xhtml
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /cms/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !^(index\.php|images|media|layout|css|libs|robots\.txt)
+RewriteRule ^(.*)$ /cms/index.php?/$1 [L]

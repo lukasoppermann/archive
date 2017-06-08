@@ -1,0 +1,204 @@
+/*------------------------*/
+/* Language Menu */
+#lang_menu{
+	float: left;
+	clear: both;
+	margin-bottom: 40px;
+	width: 100%;
+}
+#lang_menu ul{
+	float: left;
+	border: 1px solid rgb(255,255,255);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding: 1px;	
+	box-shadow: inset 0 0 3px rgb(125,125,125);
+	-webkit-box-shadow: inset 0 0 3px rgb(125,125,125);
+	-moz-box-shadow: inset 0 0 3px rgb(125,125,125);	
+}
+#lang_menu li{
+	float: left;
+	padding: 5px 15px;
+	border-left: 1px solid rgb(200,200,200);
+	box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */	
+}
+#lang_menu li:first-child{
+	border-left: none;	
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+}
+#lang_menu li:last-child{
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+#lang_menu li:hover{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+}
+#lang_menu li.active{
+	box-shadow: inset 0 0 3px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 3px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 3px rgb(200,200,200);
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+}
+#lang_menu a{
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: rgb(150,150,150);	
+}
+#lang_menu li.active a, #lang_menu li:hover a{
+	color: rgb(125,125,125);
+}
+/*------------------------*/
+/* New Menu edititng menu */
+div.menu-edit-box{
+	display: block;	
+	min-width: 200px;
+	max-width: 350px;
+	margin: 10px 25px 10px 0;	
+	position: relative;	
+	float: left;
+}
+div.menu-edit-box h4{
+	display: block;
+	overflow: hidden;
+}
+div.menu-edit-box h4 span{
+	border-left: 1px solid rgb(255,255,255);
+	outline: 1px solid rgb(200,200,200);
+	cursor: pointer;		
+	float: right;
+	height: 16px;
+	padding: 9px 12px 10px 10px;
+	margin: -12px -15px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+div.menu-edit-box h4 span:hover{
+	background-color: rgb(245,245,245);
+	background-image: -moz-linear-gradient(top, rgb(245,245,245), rgb(230,230,230)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(245,245,245)), to(rgb(230,230,230))); /* for webkit browsers */
+}
+ul.menu-edit{
+	display: block;	
+	width: 100%;
+	position: relative;	
+	float: left;	
+	padding: 3px 0 0 0;
+	margin: 0;
+}
+ul.menu-edit.empty{
+	min-height: 35px;
+}
+ul.menu-edit li{
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;	
+	margin: 0 0 5px 0;	
+}
+ul.menu-edit li:last-child{
+	margin: 0 0 0 0;		
+}
+ul.menu-edit > li{
+	margin: 0 0 10px 0;	
+}
+ul.menu-edit li div{
+	display: block;
+	float: left;
+	position: relative;	
+	height: 35px;
+	padding: 0 0 10px 0;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+ul.menu-edit li div span.label{
+	display: block;
+	float: left;
+	margin: 11px 10px 0 30px;
+	cursor: move;
+	color: rgb(125,125,125);
+	height: 20px;
+	overflow: hidden;
+}
+ul.menu-edit li div span.icon{
+	height: 15px;
+	width: 15px;
+	padding: 10px;
+	visibility: hidden;
+	position: absolute;	
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb(230,230,230)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(240,240,240)), to(rgb(230,230,230))); /* for webkit browsers */
+}	
+ul.menu-edit span.icon.move { padding: 10px 5px 10px 3px; background-color: transparent; cursor: move; left: 4px; }
+ul.menu-edit span.icon.delete { right: 40px; cursor: pointer;}
+ul.menu-edit span.icon.edit { right: 70px; cursor: pointer;}
+ul.menu-edit span.icon.add{
+	right: 0; 
+	height: 15px;
+	width: 15px;	
+	padding: 9px 12px 11px 12px;
+	cursor: pointer;
+	border-left: 1px solid rgb(210,210,210);
+	background-color: rgb(230,230,230);
+	background-image: -moz-linear-gradient(top, rgb(230,230,230), rgb(220,220,220)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(230,230,230)), to(rgb(220,220,220))); /* for webkit browsers */
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+}
+ul.menu-edit .no-nesting span.add, ul.level_3 span.add{ display: none; }
+ul.menu-edit .no-nesting span.icon.delete, ul.level_3 span.icon.delete { right: 0px; cursor: pointer;}
+ul.menu-edit .no-nesting span.icon.edit, ul.level_3 span.icon.edit { right: 30px; cursor: pointer;}
+
+ul.menu-edit li div:hover span.icon{ visibility: visible; }
+ul.menu-edit li div:hover{ 
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb(230,230,230)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(240,240,240)), to(rgb(230,230,230))); /* for webkit browsers */
+}
+.helper{
+	background: rgb(210,210,210);	
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+li.placeholder{
+	width: 80% !important;
+	min-height: 30px;
+	margin: 2px 0 0 20px !important;
+	border-width: 1px;
+	border-style: dashed;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+li.deleted{
+	margin: 0;
+	padding: 0;
+}
+ul.sortable ul { margin: 0 0 0 25px; }

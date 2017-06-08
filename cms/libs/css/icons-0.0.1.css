@@ -1,0 +1,26 @@
+/*------------------------*/
+/* icons defaults*/
+.icon:before{
+	content: "";
+	height: 16px;
+	width: 16px;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	background-repeat: no-repeat;	
+	text-indent: -99999px;
+}
+.icon:before, .ui-icon{ background-image: url('../../media/layout/formandsystem_icons_gray.png'); }
+.icon:hover:before{ background-image: url('../../media/layout/formandsystem_icons_black.png'); }
+/* icons */
+.move:before{ background-position: 0 0; }
+.delete:before{ background-position: -16px 0; }
+.add:before{ background-position: -32px 0; }
+.edit:before{ background-position: -48px 0; }
+.copy:before{ background-position: -80px 0; }
+.icon-close, .ui-icon-closethick{ background-position: -16px 0; }
+/* icons flags*/
+.flags, .language{ background-image: url('../../media/layout/formandsystem_flags.png'); }
+/* countries */
+.de{ background-position: -26px 0; }	
+.en{ background-position: -26px -18px; }

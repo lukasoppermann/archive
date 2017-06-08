@@ -1,0 +1,26 @@
+#footer{
+	padding-bottom: 5px;
+	height: 194px;
+	background: transparent url('../../media/layout/mp_ie_bottom.png') bottom no-repeat;
+}
+#body_container{
+	padding-top: 31px;
+	background: transparent url('../../media/layout/mp_ie_top.png') top no-repeat;	
+}
+	
+#body{
+	background: transparent url('../../media/layout/mp_ie_middle.png') top repeat-y;
+}
+#content{
+	padding-top: 23px;
+}
+#sidebar{
+	margin-top: -27px;
+}
+#copyright a{
+	display: block;
+	margin-top: 170px;
+	padding-right: 25px;
+	font-size: 10px;
+	color: #aaa;
+}

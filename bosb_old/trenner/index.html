@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Lukas Oppermann – vea.re">
+    <meta name="robots" content="index,follow">
+    <title>unterschiedlichkeit bereichert, gemeinsamkeit gewinnt</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
+    <style media="screen">
+      body{
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+      }
+      .body{
+        max-width: 900px;
+        display: inline-block;
+      }
+      h1{
+        font-weight: 200;
+        font-size: 250%;
+        margin-top: 20px;
+        color: rgb(0, 101, 164);
+      }
+      .copy{
+        float: left;
+        margin-bottom: 30px;
+      }
+      .column-full{
+        font-size: 150%;
+        width: 80%;
+        font-weight: 200;
+        margin-left: 10%;
+      }
+      .column{
+        text-align: left;
+        float: left;
+        width: 50%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .column--left{
+        padding-right: 2.5%;
+      }
+      .column--right{
+        padding-left: 2.5%;
+      }
+      .split{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        float: left;
+      }
+      .split-container{
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+      }
+      .split-container:after{
+        pointer-events: none;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        background-color: transparent;
+        background-image: linear-gradient( left, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,1));
+        background-image: -webkit-linear-gradient( left, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,1));
+      }
+      .split-item{
+        z-index: 5;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0px;
+        position: relative;
+        float: left;
+        width: 50%;
+        min-height: 300px;
+      }
+      .split-item--right{
+        float: right;
+      }
+      .split-item img{
+        z-index: 1;
+      }
+      a.img-link{
+        display: block;
+      }
+      a.text-link{
+        z-index: 20;
+        position: absolute;
+        left: 480px;
+        top: 300px;
+        padding: 10px 30px 10px 15px;
+        font-size: 140%;
+        color: rgb(0, 101, 164);
+        text-decoration: none;
+        display: block;
+        background: rgb(255,255,255);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+      }
+      a.text-link.left{
+        left: 30px;
+        padding: 10px 15px 10px 25px;
+      }
+      a.text-link:hover{
+        text-decoration: underline;
+      }
+      a.text-link:after{
+        position: absolute;
+        padding-left: 7px;
+        content: "›";
+        right: 15px;
+        top: 8px;
+      }
+      a.text-link.left:after{
+        content: "‹";
+        left: 5px;
+        right: auto;
+        padding-right: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+
+      <div class="copy">
+        <h1>Unterschiedlichkeit bereichert, Gemeinsamkeit gewinnt...</h1>
+        <div class="column-full">
+          <p>Unter dieser Einstellung haben wir immer zusammengearbeitet. Aber auch Unterschiedlichkeit will sich weiterentwickeln. Wir streben eine Verstärkung der unterschiedlichen Kompetenzen an.</p>
+        </div>
+        <div class="column column--left">
+
+          <p>Nach dem wir die Balance zwischen "gemeinsam arbeiten, gemeinsam denken" versus "unterschiedliche Kompetenz führt zu unterschiedlichem Handeln" für uns selbst immer zugunsten der Gemeinsamkeit entschieden haben, entschließen wir uns nach 15 Jahre bester Zusammenarbeit nun verstärkt den persönlichen Weg weiter zu entwickeln.</p>
+        </div>
+        <div class="column column--right">
+        <p>Dafür erscheint uns die organisationale Trennung sinnvoll. Wir freuen uns, daß wir eine so lange Zeit der gemeinsamen Geschichte haben konnten, und wir freuen uns auf eine jeweils neue und eigene Zukunft.</p>
+        <p>Vielen Dank!</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <a class="text-link" href="http://bosb.de/htdocs_de/oppermann.php?id=ueber_uns&&subid=oppermann">Andreas Oppermann</a>
+        <a class="text-link left" href="http://www.marionschenk.com" rel="nofollow" target="_blank">Marion Schenk</a>
+        <div class="split-container"></div>
+        <div class="split-item split-item--right">
+          <a class="img-link" href="http://bosb.de/htdocs_de/oppermann.php?id=ueber_uns&&subid=oppermann">
+            <img src="./media/landing-andreas-oppermann.jpg" />
+          </a>
+        </div>
+        <div class="split-item split-item--left">
+          <a href="http://www.marionschenk.com" rel="nofollow" target="_blank">
+            <img src="./media/landingpage-2.jpg" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-16029168-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

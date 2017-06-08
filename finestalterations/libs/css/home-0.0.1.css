@@ -1,0 +1,107 @@
+.column{
+    margin: 0 2.75% 0 0;
+    width: 31.5%;
+}
+.column:last-child{
+	margin: 0;
+}
+.block{
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.block .headline{
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	margin: 0 0 10px 0;
+}
+.block:hover{
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+}
+.block a:hover .headline{
+	color: red;
+}
+.big-banner{
+	position: relative;
+	float: left;
+}
+.content-container .gallery, .big-banner .gallery{
+	width: 660px;
+	height: 230px;
+	margin: -15px 0 25px -25px;	
+	overflow: hidden;
+	border-bottom: 1px solid rgb(225,225,225);
+	position: relative;
+}
+.big-banner .gallery{
+	width: 1000px;
+	height: 380px;
+	margin: 25px 0 0 0;
+	border-bottom: 0px solid transparent;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 2px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25), 0px 0px 2px 0px rgba(0,0,0,0.25);	
+}
+.content-container .image-wrap, .big-banner .image-wrap{
+	position: relative;
+	float: left;
+	height: 230px;
+	width: 10000px;	
+}
+.big-banner .image-wrap{
+	height: 380px;
+}
+.content-container .image, .big-banner .image{
+	width: 660px;
+	height: 230px;
+	float: left;
+	position: relative;
+}
+.big-banner .image{
+	width: 1000px;
+	height: 380px;
+}
+.content-container .image:before, .big-banner .image:before{
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);
+	background-image: url(../../media/layout/loader.gif);
+	background-repeat: no-repeat;
+	background-position: 298px 83px;
+	transition: all .4s ease;   
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+}
+.content-container .image.loaded:before, .big-banner .image.loaded:before{
+	opacity: 0;
+}
+.content-container img, .big-banner img{
+	float: left;
+}
+.caption{
+	position: absolute;
+	z-index: 20;
+	bottom: 0;
+	right: 25px;
+	padding: 15px;
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+	max-width: 300px;
+	font-size: 24px;
+	font-family: "Helvetica Neue Light";
+}

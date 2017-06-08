@@ -1,0 +1,122 @@
+#main_content form{
+	float: left;
+	display: block;
+	width: 900px;
+}
+#main_content form input, select{
+	float: left;
+	display: block;
+}
+#main_content form div.input-field{ width: 280px; } 
+#main_content form div.upload-field{ width: 240px; }
+#main_content form div.input-field.path{ width: 220px;}
+#main_content form div.upload-field input{ padding: 4px; }
+#main_content form div.select-field, #main_content form div.path{ width: 178px; }
+#main_content form div.select:before{
+	display: block;
+	right: 7px;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../media/layout/formandsystem_icons_black.png');
+	background-position: -64px 0;
+	position: absolute;
+	z-index: 2;
+	content: "";
+	overflow: hidden;
+	background-repeat: no-repeat;	
+}
+#main_content form div.form-box{ margin-right: 20px; }
+div.button{
+	margin: 0px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+#main_content form.bar{
+	float: left;
+	display: block;
+	padding: 6px 9px 9px 6px;
+	margin: 5px 0;
+	height: 40px;
+	box-shadow: inset 0 0 1px 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 0 1px rgb(255,255,255), 0 1px 0 rgb(175,175,175), 0 2px 3px 0 rgb(200,200,200);
+	background-color: rgb(240,240,240);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240)); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,255)), to(rgb(240,240,240))); /* for webkit browsers */
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#main_content #downloads.bar{
+	margin-bottom: 30px;
+}
+form.bar.edit-form input.name, form.bar.edit-form input.selectbox, #main_content form.bar.edit-form div.select:before{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	background: none;
+	border: 0;
+}
+
+#main_content form.bar.edit-form div.delete, #main_content form.bar.edit-form input.delete, #main_content form.bar.edit-form .copy input{
+	width: 26px;
+	height: 26px;
+	text-indent: -99999px;
+	position: relative;
+}
+#main_content form.bar.edit-form div.delete{ border: none; margin: 1px 5px 0px 5px;}
+#main_content form.bar.edit-form input.delete, #main_content form.bar.edit-form .copy input{
+	z-index: 3;
+	background: none;
+}
+#main_content form.bar.edit-form:hover div div.copy{ position: relative; }
+#main_content form.bar.edit-form:hover div.delete:before, #main_content form.bar.edit-form:hover div div.copy:before{
+	background-image: url('../../media/layout/formandsystem_icons_gray.png');
+	background-position: -16px 0;
+	z-index: 2;
+	content: "";
+	overflow: hidden;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	top: 5px;
+	left: 8px;
+	display: block;	
+	position: absolute;		
+}
+#main_content form.bar.edit-form:hover div div.copy:before{
+	background-position: -80px 0;
+	top: 5;
+	left: 7;
+	position: absolute;
+	z-index: 2;
+}
+#main_content form.bar.edit-form span.path{ float: left; padding: 6px 0; overflow: hidden; width: 180px; height: 14px; display: block; cursor: help;}
+#main_content form.bar.edit-form input.save, 
+#main_content form.bar.edit-form input.delete, 
+#main_content form.bar.edit-form div.delete, 
+#main_content form.bar.edit-form div.copy{ display: none; }
+#main_content form.bar.edit-form:hover input.save, 
+#main_content form.bar.edit-form:hover input.delete, 
+#main_content form.bar.edit-form:hover div.delete,
+#main_content form.bar.edit-form:hover div.copy{ display: block; }
+#main_content form.bar.edit-form div.select:hover:before{
+	background-image: url('../../media/layout/formandsystem_icons_black.png');	
+	background-position: -64px 0;	
+}
+form.bar.edit-form input.name:hover, form.bar.edit-form input.name:focus, form.bar.edit-form input.selectbox:hover{
+	box-shadow: inset 0 0 1px rgb(200,200,200);
+	-webkit-box-shadow: inset 0 0 1px rgb(200,200,200);
+	-moz-box-shadow: inset 0 0 1px rgb(200,200,200);
+	border: 1px solid rgb(200,200,200);
+}
+div.button.copy-icon{
+	padding-top: 5px;
+	display: none;
+}
+form.bar:hover div.button.copy-icon{
+	display: block;
+}

@@ -1,0 +1,387 @@
+/*---------------------*/
+/* Order Filters */
+.order-filter{
+	text-align: center;
+	display: block;
+	float: left;
+	width: 100%;
+}
+/*---------------------*/
+/* Order List */
+.orders{
+	text-align: center;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.order-filter .merged-buttons{
+	float: none;
+	display: inline-block;
+}
+.merged-buttons .button{
+	padding: 7px 15px;
+}
+/* Order List */
+.group{
+	text-align: left;
+	position: relative;
+	display: inline-block;
+	margin: 15px;
+	border: 2px dashed rgb(200,200,200);
+	border-radius: 5px;
+	width: 700px;
+}
+.order-list{
+	cursor: pointer;
+	float: left;
+	margin: 10px;
+	list-style: none;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+	border-radius: 4px;
+}
+.order-list.deleted{
+	display: none;
+}
+.order-list .item{	
+	padding: 0px;
+	height: 32px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	background: rgb(255,255,255);
+}
+.order-list .sortable-placeholder{
+	height: 32px;
+}
+.order-list li:first-child, .order-list li:first-child .item{
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+.order-list li:last-child{
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom: 0;
+	overflow: hidden;
+}
+/*---------------------*/
+/* Order List Item */
+.order{
+	float: left;
+	overflow: hidden;
+}
+.orders .item{
+	float: left;
+	padding: 0px;
+	height: 32px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	background: rgb(255,255,255);
+	overflow: hidden;
+}
+.orders .item .order-id{
+	float: left;
+	height: 100%;
+	width: 80px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	padding: 10px 5px;
+	font-size: 12px;
+	color: rgb(255,255,255);
+	text-shadow: rgba(0,0,0,0.5) 0px 1px 1px;
+	box-shadow: inset -2px 0px 3px 0px rgba(0,0,0,0.05);
+	-webkit-box-shadow: inset -2px 0px 3px 0px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset -2px 0px 3px 0px rgba(0,0,0,0.05);
+}
+.orders .payment-pending .item .order-id, .orders .payment-pending .item .price{
+	background-color: rgb(90,170,230);
+	background-image: -moz-linear-gradient(bottom, rgb(70,150,210), rgb(90,170,230));
+	background-image: -webkit-linear-gradient(bottom, rgb(70,150,210), rgb(90,170,230));
+	background-image: -o-linear-gradient(bottom, rgb(70,150,210), rgb(90,170,230));
+	background-image: -ms-linear-gradient(bottom, rgb(70,150,210), rgb(90,170,230));
+	background-image: linear-gradient(bottom, rgb(70,150,210), rgb(90,170,230));
+}
+.orders .paid .item .order-id, .orders .paid .item .price{
+	background-color: rgb(85,170,125);
+	background-image: -moz-linear-gradient(top, rgb(115,195,155), rgb(85,170,125));
+	background-image: -webkit-linear-gradient(top, rgb(115,195,155), rgb(85,170,125));
+	background-image: -o-linear-gradient(top, rgb(115,195,155), rgb(85,170,125));
+	background-image: -ms-linear-gradient(top, rgb(115,195,155), rgb(85,170,125));
+	background-image: linear-gradient(top, rgb(115,195,155), rgb(85,170,125));
+}
+.orders .closed .item .order-id, .orders .closed .item .price{
+	background-color: rgb(230,115,80);
+	background-image: -moz-linear-gradient(top, rgb(230,115,80), rgb(215,100,65));
+	background-image: -webkit-linear-gradient(top, rgb(230,115,80), rgb(215,100,65));
+	background-image: -o-linear-gradient(top, rgb(230,115,80), rgb(215,100,65));
+	background-image: -ms-linear-gradient(top, rgb(230,115,80), rgb(215,100,65));
+	background-image: linear-gradient(top, rgb(230,115,80), rgb(215,100,65));
+}
+.orders .item .order-id .zeros{
+	color: rgba(255,255,255,0.5);
+	text-shadow: none;
+}
+.order-list li:first-child .item .order-id{ border-top-left-radius: 3px; }
+.orders .item .content{
+	float: left;
+	height: 100%;
+	width: 600px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgb(240,240,240);
+}
+.orders li:last-child .content{ border-bottom: none;}
+.orders .item .price{
+	float: right;
+	font-size: 12px;
+	padding: 3px 5px;
+	margin: 6px;
+	border-radius: 3px;
+	color: rgb(255,255,255);
+	text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
+	box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.5);
+}
+.orders .item .customer{
+	float: left;
+	font-size: 12px;
+	height: 100%;
+	color: rgb(50,50,50);
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px 5px;
+}
+.orders .item .text, .orders .item .label{
+	float: left;
+}
+.orders .item .customer .text{
+	width: 130px;
+}
+.orders .item .customer .label, .orders .item .time .label{
+	width: 20px;
+	height: 20px;
+	background: url(../../layout/worx_sprite.png);
+	background-position: -160px -40px;
+	margin: -4px 5px 0 0;
+	font-size: 10px;
+	opacity: 0.25;
+}
+.orders .item .time .label{
+	background-position: -160px -60px;
+}
+.orders .item .time{
+	float: left;
+	height: 100%;
+	font-size: 12px;
+	padding: 10px 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: rgb(150,150,150);
+}
+.orders .item .tracking ::-webkit-input-placeholder{ font-size: 11px !important; }
+.orders .item .tracking :-moz-placeholder{ font-size: 11px !important; }
+.orders .item .tracking input{
+	font-size: 11px;
+	line-height: 1;
+}
+.orders .item .tracking{
+	width: 120px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	float: left;
+	margin: 5px 0 5px 5px;
+	height: 20px;
+	padding: 3px;
+	border-radius: 3px;
+	border: 1px solid rgb(200,200,200);
+	box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.15);
+}
+.orders .item button{
+	display: none;
+	float: left;
+	padding: 3px 5px;
+	margin: 3px 5px;
+}
+.orders .item:hover button{ display: block; }
+.tracking-span {
+	background: rgb(235,235,235);
+	border-radius: 3px 3px 3px 3px;
+	color: rgb(100,100,100);
+	font-size: 12px;
+	line-height: 12px;
+	margin: 6px 7px;
+	padding: 4px 8px;
+}
+/*---------------------*/
+/* Order-information */
+.information{
+	float: left;
+	width: 100%;
+	display: block;
+}
+.information .customer-information{
+	float: left;
+	text-align: left;
+	width: 200px;
+	height: 100%;
+	padding: 5px 10px 30px 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	background-color: rgb(250,250,250);
+	background-image: -moz-linear-gradient(top, rgb(245,245,245), rgb(255,255,255));
+	background-image: -webkit-linear-gradient(top, rgb(245,245,245), rgb(255,255,255));
+	background-image: -o-linear-gradient(top, rgb(245,245,245), rgb(255,255,255));
+	background-image: -ms-linear-gradient(top, rgb(245,245,245), rgb(255,255,255));
+	background-image: linear-gradient(top, rgb(245,245,245), rgb(255,255,255));
+}
+.information .customer-information .label{
+	font-size: 11px;
+	color: rgb(150,150,150);
+	padding-right: 5px;
+	display: inline-block;
+}
+.information .customer-information .shipping{
+	margin: 10px 0 5px 0;
+	width: 100%;
+}
+.information .order-information{
+	float: left;
+	display: block;
+	text-align: left;
+	width: 480px;
+	padding: 5px 10px 20px 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: inset 6px 0px 4px -4px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 5px 0px 4px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 6px 0px 4px 0px rgba(0,0,0,0.1);
+}
+.information .order-information .list{
+	float: left;
+	width: 50%;
+}
+.information .order-information .list li{
+	padding: 5px 0;
+	list-style: none;
+	font-size: 12px;
+	color: rgb(125,125,125);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.information .order-information .list li .name{
+	color: rgb(75,75,75);
+}
+.information .order-information:after{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 6px;
+	height: 20px;
+	background-color: transparent;
+	background-image: -moz-linear-gradient(top, rgba(245,245,245,0.0), rgba(245,245,245,1));
+	background-image: -webkit-linear-gradient(top, rgba(245,245,245,0.0), rgba(245,245,245,1));
+	background-image: -o-linear-gradient(top, rgba(245,245,245,0.0), rgba(245,245,245,1));
+	background-image: -ms-linear-gradient(top, rgba(245,245,245,0.0), rgba(245,245,245,1));
+	background-image: linear-gradient(top, rgba(245,245,245,0.0), rgba(245,245,245,1));
+}
+.information .order-information .boat{
+	margin-left: 10px;
+	display: block;
+	font-weight: bold;
+}
+.information .order-information .system-modules{
+	border: 1px solid rgb(225,225,225);
+	border-radius: 3px;
+	margin-right: 2px;
+	margin-top: 6px;
+	padding: 2px;
+	position: relative;
+}
+.information .order-information .system-modules .pos{
+	font-size: 10px;
+	color: rgb(150,150,150);
+}
+.information .order-information .system-modules lh{
+	position: absolute;
+	left: 5px;
+	top: -5px;
+	font-size: 10px;
+	padding: 0 3px;
+	background: rgb(245,245,245);
+}
+.information .delete-box{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: 200px;
+	height: 25px;
+}
+.information .delete{
+	float: right;
+	text-decoration: underline;
+	color: rgb(210,60,20);
+	padding: 5px;
+	display: block;
+	border-radius: 3px;
+}
+.information .delete:hover{
+	text-decoration: none;
+	color: rgb(255,255,255);
+	background: rgb(210,60,20);
+}
+.information .confirm-delete, .information .cancel-delete{
+	float: right;
+	text-decoration: none;
+	color: rgb(210,60,20);
+	background: rgb(235,235,235);
+	padding: 5px;
+	display: block;
+	border-radius: 3px;
+	margin: 0 0px 0 20px;
+}
+.information .cancel-delete{
+	color: rgb(255,255,255);
+	background: rgb(20,130,210);
+}
+.information .notes{
+	width: 460px;
+	height: 70px;
+	float: left;
+	margin: 5px 0;
+	padding: 5px;
+	border: 1px solid rgb(225,225,225);
+	background: rgb(255,255,255);
+	font-size: 11px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	overflow-y: visible;
+}
+.information .notes.error{
+	box-shadow: 0px 0px 5px 0px rgb(210,60,20);
+	-webkit-box-shadow: 0px 0px 5px 0px rgb(210,60,20);
+	-moz-box-shadow: 0px 0px 5px 0px rgb(210,60,20);
+}
+.information .notes.saved{
+	box-shadow: 0px 0px 5px 0px #60b311;
+	-webkit-box-shadow: 0px 0px 5px 0px #60b311;
+	-moz-box-shadow: 0px 0px 5px 0px #60b311;
+}
